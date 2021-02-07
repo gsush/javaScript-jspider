@@ -1,0 +1,125 @@
+/* /-----------custom stylesheet----------------/ */
+
+body{
+    
+    background-image:  linear-gradient(
+    60deg,
+     rgba(255, 165, 150, 0.5) 5%,
+     rgba(0, 228, 255, 0.35)
+     ),
+     url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    background-position: center;
+    background-attachment: fixed ;
+}
+
+/* /----------------main section starts here------------------------/ */
+
+#mainsection{
+    background-color: white;
+    width: 18%;
+    padding: 50px;
+    padding-bottom: 80px;
+    margin: 100px auto;
+    text-align: center;
+    border-radius: 5px;
+    font-family: 'Source Sans Pro',helvetica, sans-serif;
+}
+
+img {
+    border-radius: 100%;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul li{
+    display: inline-block;
+    padding: 10px;
+}
+
+h1{
+    color: #313f47;
+    font-weight: 900;
+    font-size: 27px;
+    text-transform: uppercase;
+    letter-spacing: 5.5px;
+}
+
+#para{
+    color: #313f47;
+    font-weight: 100;
+    font-size: 15px;
+    word-spacing: 4px;
+    letter-spacing: 0.6px;
+}
+
+h1:hover{
+    transform: scale(1);
+    transition: ease-in-out all 0.5s;
+    font-size: 40px;
+}
+
+img:hover{
+    transform: rotate(360deg);
+    transition: ease-in-out all 2s;
+    border: 10px solid black;
+}
+
+i{
+    font-size: 35px;
+}
+/*.fa-twitter-square:hover
+{
+  color: #00acee;
+}
+.fa-instagram:hover{
+
+    color: #00acee;    
+
+}
+.fa-facebook-square:hover{
+    color: #00acee;
+}*/
+
+ul li a{
+    border: 1px solid darkgrey;
+    padding: 15px;
+    border-radius: 100%;
+    height: 37px;
+    width: 37px;
+    display: inline-block;
+}
+
+.fab{
+    color: lightgray;
+}
+.fab:hover{
+    color: lightskyblue;
+}
+
+
+.copyw{
+
+    text-align: center;
+    color: whitesmoke;
+    letter-spacing: 0.2em;
+    font-size: 13px;
+    font-weight: lighter;
+}
+.copyw a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.copyw a:hover{
+    color: pink2;
+}
