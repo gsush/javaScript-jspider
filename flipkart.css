@@ -1,0 +1,355 @@
+@import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Roboto,
+        Arial,
+        sans-serif;
+    letter-spacing: 0;
+    background-color: #e9e9e9;
+}
+
+#headerBlock {
+    background-color: #2874f0;
+    width: 100%;
+    height: 56px;
+    /* position: fixed; */
+}
+
+#headerBlock article {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    height: 56px;
+    align-items: center;
+    justify-content: center;
+}
+
+#headerBlock article .leftHeader {
+    flex-basis: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#headerBlock article .rightHeader {
+    flex-basis: 30%;
+}
+
+.logo {
+    flex-basis: 11%;
+}
+
+.search {
+    flex-basis: 89%;
+}
+
+.main_logo_block img {
+    width: 75px;
+}
+
+.plus_logo_block span {
+    font-size: 11px;
+    font-style: italic;
+}
+
+.plus_logo img {
+    width: 10px;
+}
+
+.logo a {
+    display: block;
+    text-decoration: none;
+    line-height: 10px;
+    color: #f0f0f0;
+}
+
+.plus {
+    color: #ffe500;
+    font-weight: 500;
+    margin-right: 2px;
+}
+
+.explore {
+    color: #f0f0f0;
+
+}
+
+.plus_logo_block:hover {
+    text-decoration: underline;
+}
+
+/* search css starts here */
+.search input {
+    width: 75%;
+    box-sizing: border-box;
+    height: 35px;
+    border-radius: 2px;
+    border: 1px solid #eee;
+
+}
+
+::placeholder {
+    text-transform: capitalize;
+    padding-left: 15px;
+    font-weight: 500;
+}
+
+.search-icon-block {
+    position: relative;
+}
+
+.fa-search {
+    position: absolute;
+    left: -31px;
+    top: 3px;
+    color: #2874f0;
+    font-size: 17px;
+}
+
+/* search css ends here */
+
+/*------------right menu css starts here ---*/
+.rightHeader nav>ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.rightHeader nav>ul>li>a {
+    padding: 26px 15px 18px 33px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.rightHeader nav ul>li:nth-child(1) a.first-child {
+    background: #fff;
+    color: #2874f0;
+    padding: 6px 40px;
+    border-radius: 1px;
+    box-shadow: 0px 0px 1px 0px #11111140;
+}
+
+.rightHeader svg {
+    transform: rotate(270deg);
+    margin: 0px 4px;
+}
+
+/*-----flipkart dropdown menu -----------*/
+.first-child {
+    position: relative;
+}
+
+.dropdown {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    width: 260px;
+    margin: 7px 0;
+    left: -76px;
+    z-index: 1;
+}
+
+.dropdown .nav-item .nav-link {
+    padding: 10px 20px !important;
+
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: #444;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    transition: all .5s ease;
+}
+
+.customer_links {
+    display: flex;
+}
+
+.customer_links span {
+    flex: 1;
+}
+
+.customer_links span a.customer {
+    color: #111;
+
+}
+
+.customer_links span a.signup {
+    color: #2874f0;
+    text-align: right;
+
+}
+
+ul>li:hover ul {
+    display: flex;
+}
+
+.dropdown li {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-right: 11px solid transparent;
+    border-left: 11px solid transparent;
+    border-bottom: 11px solid #fff;
+    position: relative;
+    margin: auto;
+}
+
+.dropdownMenu {
+    display: flex;
+    align-items: center;
+}
+
+.dropdownMenu span {
+    margin: 0px 15px;
+}
+
+.dropdownMenu span i {
+    color: #2874f0;
+}
+
+span.plus_icon img {
+    width: 14px;
+    filter: invert(1);
+}
+
+.customer_links span a {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*-------right menu css ends here ----*/
+
+/*------main menu block css starts here -----*/
+#mainMenuBlock {
+    background-color: #fff;
+    height: 40px;
+    width: 100%;
+    box-shadow: 1px 1px 1px 1px #ccc;
+}
+
+#mainMenuBlock article {
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+#mainMenuBlock ul {
+    display: flex;
+    height: 40px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#mainMenuBlock ul li {
+    flex: 1 auto;
+}
+
+#mainMenuBlock ul li a {
+    text-decoration: none;
+    color: #212121;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px 0;
+}
+
+#mainMenuBlock ul li a:hover {
+    color: #2874f0;
+}
+
+#mainMenuBlock ul li a svg {
+    margin-left: 6px;
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+#mainMenuBlock ul li a svg path {
+    fill: #878787 !important;
+    opacity: 0.5;
+}
+
+
+/*----dropdown mega menu starts here ----*/
+#MegaDropDownMenuBlock {
+    background: #fff;
+    height: 75%;
+    width: 1220px;
+    box-shadow: 0px 2px 3px 0px #ccc;
+    margin: 10px 0px;
+    position: absolute;
+    left: 135px;
+    display: none;
+    z-index: 9999;
+}
+
+#MegaDropDownMenuBlock div {
+    flex-basis: 25%;
+    padding: 20px;
+}
+
+#MegaDropDownMenuBlock div:nth-child(odd) {
+    background: #fff;
+}
+
+#MegaDropDownMenuBlock div:nth-child(even) {
+    background: #f3f4f5;
+}
+
+.megaMenuDiv ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    line-height: 26px;
+}
+
+.megaMenuDiv ul li a {
+    font-size: 13px !important;
+    color: #212121 !important;
+    font-weight: 400 !important;
+}
+
+._1h5QLb a {
+    font-weight: bold !important;
+}
+
+#mainMenuBlock ul>li:hover #MegaDropDownMenuBlock {
+    display: flex;
+}
+
+#mainMenuBlock ul li:hover ._3ynUUz {
+    transform: rotate(90deg) !important;
+    -webkit-transform: rotate(90deg);
+
+}
+
+#mainMenuBlock ul li:hover ._3ynUUz path {
+    fill: #2874f0 !important;
+}
+
+/*----dropdown mega menu ends here ------*/
+
+#barsBlock {
+    display: none;
+}
+
+/*-----main menu block css ends here -----*/
