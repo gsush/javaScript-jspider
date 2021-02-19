@@ -4,27 +4,30 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- link bootstrap for css  -->
   <link rel="stylesheet" href="../bootstrap-4.6.0-dist/css/bootstrap.min.css">
-  
-  <!-- <script src="../bootstrap-4.6.0-dist/js/bootstrap.min.js"></script> -->
-  <link rel="stylesheet" href="./slider.css">
   <title>Document</title>
 </head>
 <body>
- <script src="../bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
-  <button class="btn btn-success">success</button>
-  <a href="https://www.google.com" class="btn btn-primary">Submit</a>
-  <div class="container">container</div>
-   <br>
-   <br>
-   <div class="container-fluid">container-fluid</div>
-   <br>
-   <br>
-   <div class="container-md">container-md</div>
+  <div class="container">
+    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+    <div class="row">
+      <div class="col-12 col-md-8">.col-12 .col-md-8</div>
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+    </div>
+  
+    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+    <div class="row">
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+    </div>
+  
+    <!-- Columns are always 50% wide, on mobile and desktop -->
+    <div class="row">
+      <div class="col-6">.col-6</div>
+      <div class="col-6">.col-6</div>
+    </div>
+  </div>
+  <script src="../bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
 </body>
 </html>
-<!-- 3 pes of conainers are fixed widh according o differen break poins -->
-     <!-- fixed widh will leave some margin from boh sides -->
-     <!-- breakpoins xs <576px,sm>576px md 768 px , lg 992px, elg 1200px -->

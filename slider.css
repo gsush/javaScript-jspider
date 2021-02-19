@@ -1,4 +1,10 @@
-div{
-  background-color: greenyellow;
-  height: 60px;
+*{
+  padding: 0;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.row{
+ padding: 0%;
+ margin: 0%;
 }
