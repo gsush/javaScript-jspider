@@ -1,78 +1,42 @@
-// var x = "sashi";
-// //console.log(window);
-// console.log(global.x);
-/*
+// function users(name) {
+//     return name;
+// }
+// console.log(users("hello"));
 
-let p = 10;
-function sam(){
-    let p = 11;
-    console.log(p);    
-}
-sam();
+// //funcion wih parameer
 
-var s = 10;
-function sunil(params) {
-    var s = 12;
-    console.log(s);
-}
-sunil();
-console.log(s);// here scope is here
+// function emploee(emp_id,emp_name,emp_sal,emp_desg) {
+//     return {emp_id,emp_name,emp_sal,emp_desg}
+// }
 
-var c = 10;
-*/
-// 25 feb 2021 //
-// let spider = function () {
-//     console.log("i am funcion");
-// };
+// let emp1 = emploee("one","sam",12000,"devloper");
+// let emp2 = emploee("four","ross",15000,'scienis'); 
+// console.log(emp1,emp2);
 
-// spider();
-
-// //IIFE
-// (function (params) {
-//     console.log("i am iief funcion");
-// })();
+// function Users(name,age,salar,compan) {
+//     return {
+//         name,age,salar,compan
+//     };// removing reurn saemen will cause undefined
+// }
+// let user1 = Users("sam",20,20000,"dlf");
+// console.log(user1);
 
 
-// var $ = 'jquer';
-// var $ = 'reac';
-// var $ = 'angular';
+// function Users() {
+//     return arguments; // return values wih emp parameters built in array like object only available in normal func.
+// } // not available in arrow funcion
 
-// console.log($);//angular all are global scope
-// poluing global scope
-// iife examples
-// (function (params) {
-//     var $ = 'jquer';// local var
-//     console.log($);
-// })();
+// let emp = Users("manu",20,"ghosh");
+// console.log(emp[2]);
 
-// (function (params) {
-//     var $ = 'reac'; // local var
-//     console.log($);
-// })();
+// function jspider(...rest){
+//     return rest
+// }
 
-// (function (params) {
-//     var $ = 'angular';
-//     console.log($);// local var
-// })();
+// console.log(jspider("fer","jaca","hjof"));
 
-
-{
-    let $ = 'jquer'; 
-    console.log($); // anoher wa of expressing local scope
-}
-{
-    let $ = 'reac';
-    console.log($);
-}
-{
-    let $ = 'angular';
-    console.log($);
+function courses(course,rainer, ...rest) {
+    return{course,rainer,rest};
 }
 
-
-//funcion declaraion
-
-function jspider(params) {
-    console.log('i am naming funcion');
-}
-jspider();
+console.log(courses("java","c","cpp","gho","ghj"));
