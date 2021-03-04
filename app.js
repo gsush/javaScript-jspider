@@ -13,14 +13,14 @@
 /*
  * Programming Quiz: Inline Functions (5-6)
  */
- 
- /*
- * QUIZ REQUIREMENTS
- * - Your code should have an `emotions()` function
- * - Your code should call the `emotions()` function
- * - Your `emotions()` function call should have an inline function expression passed as the second parameter
- * - Your function expression should return the expected output
- */
+
+/*
+* QUIZ REQUIREMENTS
+* - Your code should have an `emotions()` function
+* - Your code should call the `emotions()` function
+* - Your `emotions()` function call should have an inline function expression passed as the second parameter
+* - Your function expression should return the expected output
+*/
 
 
 // // don't change this code
@@ -77,7 +77,7 @@
 //  * - Your code should print `crew` to the console as an array. Do not iterate over the elements. 
 //  * - BE CAREFUL ABOUT THE PUNCTUATION AND THE EXACT WORDS TO BE PRINTED.
 //  */
- 
+
 // var captain = "Mal";
 // var second = "Zoe";
 // var pilot = "Wash";
@@ -104,28 +104,324 @@
  * QUIZ REQUIREMENTS
  * - Your code should have a variable `prices`
  * - The variable `prices` should be an array having different values for the 1st, 3rd, and 7th elements
- * - Your code should print `prices` to the console as an array. Do not iterate over the elements. 
+ * - Your code should print `prices` to the console as an array. Do not iterate over the elements.
  */
- 
-var prices = [1.23, 48.11, 90.11, 8.50, 9.99, 1.00, 1.10, 67.00];
 
-// your code goes here
-// console.log(prices[0]);
+// var prices = [1.23, 48.11, 90.11, 8.50, 9.99, 1.00, 1.10, 67.00];
 
-for(var i = 0;i < prices.length; i++){
-   // console.log(prices[i]+ "");
-    
-     //change the value of first element
-    if(i===0){
-        prices[i]=11;
-    }
-    //change the value of third element
-    else if(i===2){
-        prices[i]=33;
-    }
-    //change the value of seventh element
-    else if(i===6){
-        prices[i]=77;
-    }
-}
-console.log(prices);
+// // your code goes here
+// // console.log(prices[0]);
+
+// for(var i = 0;i < prices.length; i++){
+//    // console.log(prices[i]+ "");
+
+//      //change the value of first element
+//     if(i===0){
+//         prices[i]=11;
+//     }
+//     //change the value of third element
+//     else if(i===2){
+//         prices[i]=33;
+//     }
+//     //change the value of seventh element
+//     else if(i===6){
+//         prices[i]=77;
+//     }
+// }
+// console.log(prices);
+
+
+
+
+
+// funcion hoising
+// x();// calling // function expression is not supporting during function expression hoising
+// //cannot access'x' before iniializaion
+// let x = function(){
+//   console.log('i am x');
+// }; //called part
+
+// work();
+// function work(){ // function hoisting works only with function declaration
+//     console.log('funcion hoising is working ');
+// }
+
+
+
+
+// function sam(x,z){
+//     return{x,z};
+// }
+// console.log(sam('hello','bee'));
+
+// function ram(x="hello",z="jee"){// default parameterswill print
+//     return{x,z};
+// }
+// console.log(ram());
+// console.log(ram('bye','wow'));// default values are edited
+
+//arrow funcion works only with anonymous and function expression only
+// arrow funcion syntax
+// ()=> {
+// code o be execued
+//}
+
+
+// let normalFuncion = function (){
+//     console.log('i am normal function');
+// };
+// normalFuncion();
+
+// // conver normal funcin ino arrow funcion
+// let arrowFuncion = () => {
+//     console.log('i am arrow function');
+// };
+// arrowFuncion();
+
+
+// function ghs(){
+//     console.log('i am funcion declaraion');
+// }
+
+// ghs();
+
+// arrow function
+// arrow function dosen't work with function declaration
+// qsiper () => {
+//     console.log("yes i have arrow func with no use");
+// }
+// qsiper();
+
+
+// let x = function (){
+//     return 'i am x';// normal function where 3 line are required 
+// }// removing return will give o/p undefined
+// // removing curly braces will give unexpected string
+
+// console.log(x());
+
+// let z = () => 'i am z';// in case one line need to be return
+// console.log(z());
+
+// // only one line we can remove parenthesis with underscore
+// let p = _ => 'i am z';
+// console.log(p());
+
+
+// let q = () => {let z= 10; console.info(z)}; // more han one line curl braces are required
+// q();
+
+// let x = function(name){
+//     return name;
+// }
+// console.log(x("sashi"));
+
+// let z = name => name;
+// console.log(z("snehangshu"));
+
+// let c = _ => 'i am new';
+// console.log(c());
+
+
+// // array with arrow function
+// let normalfuncionwihmuliplevalue = function (x,z){
+//     // if arra
+//     //return['shubma','shshi'];//arra lieral in javascrip
+//     //var x = 'shuma';
+//     //var z = 'dinesh';
+//     return [x,z];
+// }
+
+// console.log(normalfuncionwihmuliplevalue("shubham","dinesh"));
+
+
+// let arrowwihArra = (x,z) => [x,z];
+// console.log(arrowwihArra('shubam','dinesh'));
+
+
+
+// let normalFuncionwihObjec = function (name,sal){
+//     // return {
+//     //     name:"dinesh",
+//     //     compan:"jspider",
+//     //     designaion:"developer",
+//     //     sal: Infinity,
+//     // }; //object literals
+
+// return{name,sal}
+// }
+
+// console.log(normalFuncionwihObjec('dinesh',222));
+
+// // ****************arrow funcion reurning objec ******
+// let ArrowihObjec = (name,sal) => ({name,sal});
+// console.log('sashi',1000);
+
+// (a, b) => a + b + 100;
+// console.log((3,4));
+
+
+//normal funcion is having array like  argument object
+// arrow funcion dosen't; have arguemnt object
+
+// let normalFunction = function () {
+//   return arguments;
+// };
+// console.log(normalFunction("sashi", "name", "madhu"));
+
+//02/03/2021
+
+// let ArrowFunction = _ =>
+//     console.log(ArrowFunction("sasih", "name", "helo"));
+// ArrowFunction();
+// getting uncaught rangeError
+
+// no this binding in arrow function
+
+// let users = {
+//     name: `madhu`,
+//     company: `jspider`,
+//     getinfo: function () {
+//         console.log(this);
+//         console.log(`my name is ${this.name} i work for ${this.company}`);
+//     }
+// }
+// // console.log(users.getinfo());
+
+// let usersWithArrow = {
+//     name: `vinay`,
+//     company: `testyantra`,
+//     getinfo: () => {
+//         console.log(this);// window object
+//         console.log(`my name is ${this.name} i work for ${this.company}`);
+//     }
+// }
+// console.log(users.getinfo());
+// console.log(usersWithArrow.getinfo());
+
+
+// // call back function
+// function child() {
+//     console.log('hello');
+// }// called part
+
+// function java() {
+//     console.log('i am java');
+// }
+
+// function javascript() {
+//     console.log('i am javascript');
+// }
+
+// function parent(callback) {
+//     //console.log('hello world');
+//     return callback;
+// }
+// console.log(parent(child()));
+// console.log(parent(java()));
+// console.log(parent(javascript()));
+
+// function greeting(name) {
+//     alert('Hello ' + name);
+// }
+
+// function processUserInput(callback) {
+//     var name = prompt('Please enter your name.');
+//     callback(name);
+// }
+
+// processUserInput(greeting);
+
+// function car() {
+//     console.log('i am car');// calling function will print this
+// };
+
+// function carObject(carname) {
+//     return carname();// call back is used to return the object whatever is given
+// };
+// carObject(function () {
+//     console.log('i am car Object');// this is i am car object print
+// });
+// car(function () {
+//     console.log('why is this');// this will print the i am car not why is this
+// })
+
+// let add = function (a, b) {
+//     return a + b;
+// }
+// let add = (a, b) => a + b;
+// let multiply = (a, b) => a * b;
+
+// function calculation(num1, num2, callback) {
+//     return callback(num1, num2);
+// }// here the num1 and num2 are arguments passed inside the callback function
+
+// console.log(calculation(10, 10, add));
+// console.log(calculation(12, 12, multiply));
+
+
+// function closure
+
+// var outertext = 'I am outertext lik i am global variable';
+
+// function outerBlock() {
+//     var innertext = ' i am innertext within outerBlock';//local/function scope
+//     console.log(outertext);
+//     console.log(innertext);
+//     function innerBlock() {
+//         var x = ' iam x only available inside innerBlock';
+//         console.log(x);
+//         console.log(innerBlock);
+//         console.log(outerBlock);
+//     }
+//     innerBlock();
+// }
+// outerBlock();
+
+//closure scope chain
+// constructor function
+// create object using constructor
+
+// function users(name) {
+//     console.log(this);// current object
+//     this.name = name;
+// }
+
+// new users();// without new window object and with new current object
+// let sashi = users("sashi");
+// console.log(sashi);
+
+// 3/3/21
+
+
+let languages = ["javascrip", "java", "phon", "php"]; // array literals
+console.log(languages.length); // length of values
+console.log(typeof languages); // object
+console.log(languages[1]); // array index start from 0.
+
+let sring = "java,javascrip,php,c#";
+console.log(sring.length); //lengh of he characer
+
+console.log(typeof sring); //sring
+
+// constructor function
+// function user() {
+//     console.log(this);
+// }
+// new user();
+
+// function users(emp_name, emp_id, emp_salary, emp_designation) {
+//     // return { emp_name, emp_id, emp_salary, emp_designation };
+//     this.emp_name = emp_name; // this refer to window or current object
+//     this.emp_id = emp_id;
+//     this.emp_salary = emp_salary;
+//     this.emp_designation = emp_designation;
+// }// constructor function always have this function
+// console.log(users('sam', 'jsp1', 10000, 'manager')); // window object undefined
+// console.log(new users('sam', 'jsp1', 10000, 'manager')); // refers to current object
+
+// let dinesh = new users('dinesh', 'type1', 30000, 'nodejs dev');// this is instances for the constructor function
+// console.log(dinesh);
+// let sashi = new users("sashi", "thpe2", 12345, "javascript");
+// console.log(sashi);
+
