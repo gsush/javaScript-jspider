@@ -35,13 +35,13 @@
 // // Call the emotions() function with two arguments
 // // Argument 1 - "happy" string
 // // Argument 2 - an inline function expression
-// emotions("happy",function(num){
-//    var sound = "";
-//    for (var i = 0;i < num; i++){
-//        sound += 'ha';
-//    }
-//    sound += '!';
-//    return sound;
+// emotions("happy", function (num) {
+//     var sound = "";
+//     for (var i = 0; i < num; i++) {
+//         sound += 'ha';
+//     }
+//     sound += '!';
+//     return sound;
 // });
 
 
@@ -137,63 +137,63 @@
 // funcion hoising
 // x();// calling // function expression is not supporting during function expression hoising
 // //cannot access'x' before iniializaion
-// let x = function(){
-//   console.log('i am x');
+// let x = function () {
+//     console.log('i am x');
 // }; //called part
 
 // work();
-// function work(){ // function hoisting works only with function declaration
+// function work() { // function hoisting works only with function declaration
 //     console.log('funcion hoising is working ');
 // }
 
 
 
 
-// function sam(x,z){
-//     return{x,z};
+// function sam(x, z) {
+//     return { x, z };
 // }
-// console.log(sam('hello','bee'));
+// console.log(sam('hello', 'bee'));
 
-// function ram(x="hello",z="jee"){// default parameterswill print
-//     return{x,z};
+// function ram(x = "hello", z = "jee") {// default parameterswill print
+//     return { x, z };
 // }
 // console.log(ram());
-// console.log(ram('bye','wow'));// default values are edited
+// console.log(ram('bye', 'wow'));// default values are edited
 
-//arrow funcion works only with anonymous and function expression only
-// arrow funcion syntax
+//arrow function works only with anonymous and function expression only
+// arrow function syntax
 // ()=> {
-// code o be execued
+// code to be executed
 //}
 
 
-// let normalFuncion = function (){
+// let normalFuncion = function () { // function expression 
 //     console.log('i am normal function');
 // };
 // normalFuncion();
 
-// // conver normal funcin ino arrow funcion
+// // convert function expression/normal function into arrow function
 // let arrowFuncion = () => {
 //     console.log('i am arrow function');
 // };
 // arrowFuncion();
 
 
-// function ghs(){
+// function ghs() {
 //     console.log('i am funcion declaraion');
 // }
 
 // ghs();
 
-// arrow function
-// arrow function dosen't work with function declaration
-// qsiper () => {
+// // arrow function
+// // arrow function dosen't work with function declaration
+// qsiper() => {
 //     console.log("yes i have arrow func with no use");
 // }
 // qsiper();
 
 
-// let x = function (){
+// let x = function () {
 //     return 'i am x';// normal function where 3 line are required 
 // }// removing return will give o/p undefined
 // // removing curly braces will give unexpected string
@@ -207,11 +207,20 @@
 // let p = _ => 'i am z';
 // console.log(p());
 
+// let b = function (name) {
+//     return name;
+// }
+// console.log(b("hews"));
 
-// let q = () => {let z= 10; console.info(z)}; // more han one line curl braces are required
+// //using arrow function
+// let d = name => name; // one parameter remove parenthesis
+// console.log(d("hello "));
+
+
+// let q = () => { let z = 10; console.info(z) }; // more han one line curl braces are required
 // q();
 
-// let x = function(name){
+// let x = function (name) {
 //     return name;
 // }
 // console.log(x("sashi"));
@@ -223,49 +232,49 @@
 // console.log(c());
 
 
-// // array with arrow function
-// let normalfuncionwihmuliplevalue = function (x,z){
+// array with arrow function
+// let normalfuncionwihmuliplevalue = function (x, z) {
 //     // if arra
-//     //return['shubma','shshi'];//arra lieral in javascrip
-//     //var x = 'shuma';
-//     //var z = 'dinesh';
-//     return [x,z];
+//     return ['shubma', 'shshi'];//arra lieral in javascrip
+//     // var x = 'shuma';
+//     // var z = 'dinesh';
+//     // return [x, z];
 // }
 
-// console.log(normalfuncionwihmuliplevalue("shubham","dinesh"));
+// console.log(normalfuncionwihmuliplevalue("shubham", "dinedash"));
 
 
-// let arrowwihArra = (x,z) => [x,z];
-// console.log(arrowwihArra('shubam','dinesh'));
+// let arrowwihArra = (x, z) => [x, z];
+// console.log(arrowwihArra('shubam', 'dinesh'));
 
 
 
-// let normalFuncionwihObjec = function (name,sal){
-//     // return {
-//     //     name:"dinesh",
-//     //     compan:"jspider",
-//     //     designaion:"developer",
-//     //     sal: Infinity,
-//     // }; //object literals
+// let normalFuncionwihObjec = function (name, sal) {
+//     return {
+//         name: "dinesh",
+//         compan: "jspider",
+//         designaion: "developer",
+//         sal: Infinity,
+//     }; //object literals
 
-// return{name,sal}
+//     return { name, sal }
 // }
 
-// console.log(normalFuncionwihObjec('dinesh',222));
+// console.log(normalFuncionwihObjec('dinesh', 222));
 
-// // ****************arrow funcion reurning objec ******
-// let ArrowihObjec = (name,sal) => ({name,sal});
-// console.log('sashi',1000);
+// ****************arrow function returning object ******
+// let ArrowihObjec = (name, sal) => ({ name, sal });
+// console.log('sashi', 1000);
 
 // (a, b) => a + b + 100;
-// console.log((3,4));
+// console.log((3, 4));
 
 
-//normal funcion is having array like  argument object
-// arrow funcion dosen't; have arguemnt object
+// // normal funcion is having array like  argument object
+// // arrow funcion dosen't; have arguemnt object
 
 // let normalFunction = function () {
-//   return arguments;
+//     return arguments;
 // };
 // console.log(normalFunction("sashi", "name", "madhu"));
 
@@ -286,7 +295,7 @@
 //         console.log(`my name is ${this.name} i work for ${this.company}`);
 //     }
 // }
-// // console.log(users.getinfo());
+// console.log(users.getinfo());
 
 // let usersWithArrow = {
 //     name: `vinay`,
@@ -296,7 +305,7 @@
 //         console.log(`my name is ${this.name} i work for ${this.company}`);
 //     }
 // }
-// console.log(users.getinfo());
+// //console.log(users.getinfo());
 // console.log(usersWithArrow.getinfo());
 
 
@@ -360,7 +369,7 @@
 // console.log(calculation(12, 12, multiply));
 
 
-// function closure
+// //function closure
 
 // var outertext = 'I am outertext lik i am global variable';
 
@@ -378,7 +387,7 @@
 // }
 // outerBlock();
 
-//closure scope chain
+// closure scope chain
 // constructor function
 // create object using constructor
 
@@ -394,17 +403,17 @@
 // 3/3/21
 
 
-let languages = ["javascrip", "java", "phon", "php"]; // array literals
-console.log(languages.length); // length of values
-console.log(typeof languages); // object
-console.log(languages[1]); // array index start from 0.
+// let languages = ["javascrip", "java", "phon", "php"]; // array literals
+// console.log(languages.length); // length of values
+// console.log(typeof languages); // object
+// console.log(languages[1]); // array index start from 0.
 
-let sring = "java,javascrip,php,c#";
-console.log(sring.length); //lengh of he characer
+// let sring = "java,javascrip,php,c#";
+// console.log(sring.length); //lengh of he characer
 
-console.log(typeof sring); //sring
+// console.log(typeof sring); //sring
 
-// constructor function
+// //constructor function
 // function user() {
 //     console.log(this);
 // }
@@ -417,11 +426,17 @@ console.log(typeof sring); //sring
 //     this.emp_salary = emp_salary;
 //     this.emp_designation = emp_designation;
 // }// constructor function always have this function
-// console.log(users('sam', 'jsp1', 10000, 'manager')); // window object undefined
-// console.log(new users('sam', 'jsp1', 10000, 'manager')); // refers to current object
+// // console.log(users('sam', 'jsp1', 10000, 'manager')); // window object undefined
+// // console.log(new users('sam', 'jsp1', 10000, 'manager')); // refers to current object
 
 // let dinesh = new users('dinesh', 'type1', 30000, 'nodejs dev');// this is instances for the constructor function
 // console.log(dinesh);
 // let sashi = new users("sashi", "thpe2", 12345, "javascript");
 // console.log(sashi);
 
+
+
+var name = "snehangshu";
+var place = `bangalore`;
+var result = `my name is ${name} and i live in ${place}`;
+console.log(result);
