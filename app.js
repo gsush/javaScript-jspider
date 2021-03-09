@@ -1,94 +1,72 @@
-// array and iterating throught it
-// uncomment the methods that you want to run on your local environment
-let array = ["java", "python", "javaScript", "node.js", "php"];
-// for (let i = 0; i < array.length; i++) {
-//     console.log(array[i]);// this is how the for loop is used for iterating through the loop in array.
-// }
+// // 9th march 2021
+// // splice method is for inserting value at any position in array
+// // splice (position,delete count,add)
+// let users = ["sashi", "manu", "kartik", "sashi", "rahul"];
+// users.splice(2, 1, "sam", "exam");
+// console.log(users);
+// // // there the zero used for removing all the elements from the array
+// // let deleteValue = users.splice(0);
+// // console.log(deleteValue);
+// // console.log(users);
 
-// EcmaScript 6 introduced new way for the above loop
-// which is called as iterator object
-// for of loop
-// for (let x of array) {
-//     console.log(x);
-// }
+// // index method used to find out the index element of the array
+// console.log(users.indexOf("sashi")); // start from the start of the array
+// // return -1 when there is no matching is done
+// console.log(users.lastIndexOf("sashi"));
+// // String.prototype.match() for finding all the array
 
-// // iterating over an Array
-// const iterable = [10, 20, 30];
-// for (const value of iterable) {
-//     console.log(value);
-// }
+let languages = ["java", "python", "javascript", "java", "javascript", "java"];
+let filteredContent = languages.filter((value, index, array) => {
+    if (array.indexOf(value) === index) {
+        return value;
+    }
+});
+console.log(filteredContent);
+let filteredLength = languages.filter(word => word.length > 4);
+console.log(filteredLength);// word length than 4 will return
 
-// // for iterable object with the help of function
-// let args = function () {
-//     for (let i of arguments) {
-//         console.log(i);
-//     }
-// }
-// args("sameer", "rahul");
+let ages = [10, 40, 50, 60, 80, 90, 100, 500, 600];
+let filteredAges = ages.filter((value) => value >= 55);
+console.log(filteredAges);
+console.log(ages);
 
-// There are more than 33 array helper methods
-// array.prototype.forEach only works with array looping over
-// also using only callback function the for.each method works
-// the return statement does not work with for each method
-// array.forEach(function (value, index, array) {
-//     console.log(array);
-//     console.log(`${index} of the position ${value}`);
-// })
+// sorting method uses UTF - 16 algorithms
+let users = ["sashi", "manu", "kartik", "sashi", "rahul", "Arun", "babul", "chinmay"];
+let sortIt = users.sort();// by default ascending order
+console.log(sortIt);
+// but this will not work if the array is a list of numbers;
+let num = [50, 60, 10, 80, 70, 55, 11, 2, 3,];
+let numsort = num.sort();
+console.log(numsort);// output is coming but it is wrong.
+// this is fixed using a compare function
+let sortNum = num.sort((a, b) => {
+    //return a - b;// sort by ascending 
+    return b - a;// sort by descending
+});
+console.log(sortNum);
 
-//using arrow function the for.each method
-// array.forEach(element => console.log(element));
-// array.forEach((value, index, array) => console.log(value, index, array));
+// reverse method to print array in backword direction
+let reverseString = users.reverse();
+console.log(reverseString);
 
-// Array helper method called as map
-// array.prototype.map(callback function)
-// advantage of using map method it return value as well as it is fast
-// in react we prefer to use map method over foreach
-//array.map((value, index, array) => console.log(value, index, array));
-// let array_new = [10, 20, 30, 40, 50, 60];
-// // for each is a Array method
-// // no return type in for each method
+// reverse a string into array as string does not have a reverse method.
+// step 1 : first convert the string into an array
+let str = "snehangshu";
+// let convertStringIntoArray = [...str];
+let convertStringIntoArray = str.split("");
+// now reverse the array using reverse method of array
+let reverseIt = convertStringIntoArray.reverse();
+// now the reverse of the array is there 
+// need to convert the array into string
+let convertToString = reverseIt.join("");
+console.log(convertToString);
 
-// var x = array_new.forEach(function (value) {
-//     //console.log(value);// print the value
-//     return value; // undefined
-// })
-// console.log(x);
-
-// //Array.prototype.map(callback function)
-// //map is an array helper method
-// var y = array_new.map(function (value) {
-//     return value;// map return statement is valid
-// })
-// console.log(y);
-
-// // channing process in map method only works in map
-// function getX(...rest) {
-//     return [rest].map(x => x);
-// }
-// console.log(getX('rahil', "sameer", `sam`));
-
-// channing process of map method
-function gety(...rest) {
-    return [rest].map(x => x).join("");//map channing
+// using function this can be done in fewer steps
+function ReverseString(str) {
+    return [...str].reverse().join("");
 }
+console.log(ReverseString("ghosh"));
 
-console.log(gety('sum', 'raum', 'rahul', 'south', 'north', 'east'));
-
-// looping and returning
-var x = [10, 20, 30, 40, 50];
-let xclone = x.map(x => x);
-console.log(xclone);
-
-// Inserting new values at the last index in array using push method
-var index = ["sashi", "madhu", "snehangshu", "Ghosh", "ali"];
-index.push("sunil");
-console.log(index);
-// Deleting new values at the last index in array using pop method
-index.pop();
-console.log(index);
-// Inserting new value at the first index in array using unshift method
-index.unshift("Raman");
-console.log(index);
-// Deleting new value at the first index in array using shift method
-index.shift();
-console.log(index);
+let giveUserInto = prompt("please enter you name");
+document.write(ReverseString(giveUserInto));
+document.write(`<h1>${ReverseString(giveUserInto)}</h1>`)
