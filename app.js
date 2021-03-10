@@ -1,72 +1,72 @@
-// // 9th march 2021
-// // splice method is for inserting value at any position in array
-// // splice (position,delete count,add)
-// let users = ["sashi", "manu", "kartik", "sashi", "rahul"];
-// users.splice(2, 1, "sam", "exam");
-// console.log(users);
-// // // there the zero used for removing all the elements from the array
-// // let deleteValue = users.splice(0);
-// // console.log(deleteValue);
-// // console.log(users);
+// 10 march 2021
+// Array.prototype.reduce(callbackfn)
+// retrun the sum of the array elements
+// let num = [10, 20, 30, 40, 50, 60, 70, 400];
+// let total = num.reduce(function (accumulator, currentValue) {
+//     console.log(accumulator);
+//     console.log(currentValue);
+//     return accumulator + currentValue;
+// });
+// console.log(total);
 
-// // index method used to find out the index element of the array
-// console.log(users.indexOf("sashi")); // start from the start of the array
-// // return -1 when there is no matching is done
-// console.log(users.lastIndexOf("sashi"));
-// // String.prototype.match() for finding all the array
+// // single output value using all the elements of the array
+// let reduceData = ["s", "n", "e", 'h', 'a', 'n', 'g', 's', 'h', 'u'];
+// let newResult = reduceData.reduce((accumulator, currentValue) => accumulator + currentValue);
+// console.log(newResult);
 
-let languages = ["java", "python", "javascript", "java", "javascript", "java"];
-let filteredContent = languages.filter((value, index, array) => {
-    if (array.indexOf(value) === index) {
-        return value;
-    }
-});
-console.log(filteredContent);
-let filteredLength = languages.filter(word => word.length > 4);
-console.log(filteredLength);// word length than 4 will return
+// let newarray = [1, 2, 3, 4, 5];
+// const reducer = (accumulator, currentValue) => accumulator + currentValue;
+// console.log(newarray.reduce(reducer));
 
-let ages = [10, 40, 50, 60, 80, 90, 100, 500, 600];
-let filteredAges = ages.filter((value) => value >= 55);
-console.log(filteredAges);
-console.log(ages);
+// // reverse a string and print it
+// // first this is convert the string into an array and then use the reverse method and join to make it string
+// // again
+// let arr = ["s", "n", "e", 'h', 'a', 'n', 'g', 's', 'h', 'u'];
+// let res = arr.reduce((accumulator, currentValue) => {
+//     let x = accumulator + currentValue;
+//     console.log(typeof x);
+//     let reverstIt = [...x].reverse().join("");
+//     return reverstIt;
+// });
 
-// sorting method uses UTF - 16 algorithms
-let users = ["sashi", "manu", "kartik", "sashi", "rahul", "Arun", "babul", "chinmay"];
-let sortIt = users.sort();// by default ascending order
-console.log(sortIt);
-// but this will not work if the array is a list of numbers;
-let num = [50, 60, 10, 80, 70, 55, 11, 2, 3,];
-let numsort = num.sort();
-console.log(numsort);// output is coming but it is wrong.
-// this is fixed using a compare function
-let sortNum = num.sort((a, b) => {
-    //return a - b;// sort by ascending 
-    return b - a;// sort by descending
-});
-console.log(sortNum);
+// console.log(res);// There is a problem with this method hence we use reduceRight method
+// let res2 = arr.reduceRight((accumulator, currentValue) => accumulator + currentValue);
+// console.log(res2);
 
-// reverse method to print array in backword direction
-let reverseString = users.reverse();
-console.log(reverseString);
+// // two dimentional array 
 
-// reverse a string into array as string does not have a reverse method.
-// step 1 : first convert the string into an array
-let str = "snehangshu";
-// let convertStringIntoArray = [...str];
-let convertStringIntoArray = str.split("");
-// now reverse the array using reverse method of array
-let reverseIt = convertStringIntoArray.reverse();
-// now the reverse of the array is there 
-// need to convert the array into string
-let convertToString = reverseIt.join("");
-console.log(convertToString);
+// let twodarr = [[1, 2], [2, 2], [3, 3], [4, 4], [5, 5]];
+// let twodarray = [[1, 2], ['sam', 'ram', 'game', 'rani'], [3, 3], [4, 4]];
+// //console.log(twodarr[0][1]);
 
-// using function this can be done in fewer steps
-function ReverseString(str) {
-    return [...str].reverse().join("");
-}
-console.log(ReverseString("ghosh"));
+// let neew = twodarr[2].forEach(x => x); // for each method no
+// console.log(neew);
 
-let giveUserInto = prompt("please enter you name");
-document.write(ReverseString(giveUserInto));
-document.write(`<h1>${ReverseString(giveUserInto)}</h1>`)
+// // return a single value array 
+// let outpt = twodarr.reduce((accumulator, currentValue) => {
+//     console.log(currentValue);
+//     return accumulator.concat(currentValue);
+// });
+// console.log(outpt);
+
+// // for the sum of the result outpt
+// let resultd = outpt.reduce((accumulator, currentValue) => accumulator + currentValue);
+// console.log(resultd);
+
+// // multidimentional array
+// let arra = [[1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [[[[[[[[[[[[[[[[1, 1, 1]]]]]]]]]]]]]]]]];
+// // instead of using reduce method we can use the flat method
+// let result = arra.flat(Infinity);
+// console.log(result);
+
+// let output = [...result].reduce((accumulator, currentValue) => accumulator + currentValue);
+// console.log(output);
+
+// Array.prototype.flat() this is the method used instead of using reduce method
+
+//Array.prototype.find(callbackfn) method
+let num = [10, 30, 50, 60, 100, 30, 20, 300, 400,];
+let result = num.find(element => element > 60);
+let result1 = num.findIndex(element => element > 60);
+console.log(result);
+console.log(result1);
