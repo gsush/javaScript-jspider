@@ -35,19 +35,19 @@
 
 // // two dimentional array 
 
-// let twodarr = [[1, 2], [2, 2], [3, 3], [4, 4], [5, 5]];
+let twodarr = [[1, 2], [2, 2], [3, 3], [4, 4], [5, 5]];
 // let twodarray = [[1, 2], ['sam', 'ram', 'game', 'rani'], [3, 3], [4, 4]];
 // //console.log(twodarr[0][1]);
 
 // let neew = twodarr[2].forEach(x => x); // for each method no
 // console.log(neew);
 
-// // return a single value array 
-// let outpt = twodarr.reduce((accumulator, currentValue) => {
-//     console.log(currentValue);
-//     return accumulator.concat(currentValue);
-// });
-// console.log(outpt);
+// return a single value array 
+let outpt = twodarr.reduce((accumulator, currentValue) => {
+    console.log(currentValue);
+    return accumulator.concat(currentValue);
+});
+console.log(outpt);
 
 // // for the sum of the result outpt
 // let resultd = outpt.reduce((accumulator, currentValue) => accumulator + currentValue);
@@ -64,9 +64,10 @@
 
 // Array.prototype.flat() this is the method used instead of using reduce method
 
-//Array.prototype.find(callbackfn) method
-let num = [10, 30, 50, 60, 100, 30, 20, 300, 400,];
-let result = num.find(element => element > 60);
-let result1 = num.findIndex(element => element > 60);
-console.log(result);
-console.log(result1);
+// `//Array.prototype.find(callbackfn) method
+// let num = [10, 30, 50, 60, 100, 30, 20, 300, 400,];
+// let result = num.find(element => element > 60);// the next number will print
+// let result1 = num.findIndex(element => element > 60); // index of the next number will print
+// console.log(result);
+// console.log(result1);`
+
