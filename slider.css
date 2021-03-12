@@ -1,10 +1,35 @@
-*{
+* {
   padding: 0;
   margin: 0%;
   box-sizing: border-box;
 }
 
-.row{
- padding: 0%;
- margin: 0%;
+body {
+  background-color: antiquewhite;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  width: 80%;
+  margin: 0auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div {
+  flex: 1;
+  background-color: aqua;
+  padding: 10px;
+  margin: 10px;
+}
+
+img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+h2 {
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+}
+p {
+  padding: 5px;
 }
