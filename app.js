@@ -154,15 +154,15 @@
 //console.log(user);
 // console.log(createserver);
 
-let obj1 = { name: 'manu', name: 'rahul' }; //putting another value will print the latest value
-let obj2 = { age: 20 };
+// let obj1 = { name: 'manu', name: 'rahul' }; //putting another value will print the latest value
+// let obj2 = { age: 20 };
 
-let combine = Object.assign(obj1, obj2);
-console.log(combine);
+// let combine = Object.assign(obj1, obj2);
+// console.log(combine);
 
-// this result can be achieved using spread operator
-let combineWithSpreadoperator = { ...obj1, ...obj2 };
-console.log(combineWithSpreadoperator);
+// // this result can be achieved using spread operator
+// let combineWithSpreadoperator = { ...obj1, ...obj2 };
+// console.log(combineWithSpreadoperator);
 
 // object properties are mutable and two methods are there to stop it
 // using strict and freeze methods.
@@ -189,11 +189,11 @@ console.log(combineWithSpreadoperator);
 // users.age = 55;
 // console.log(users);
 
-let user = {
-    username: "anu",
-    company: "qspider",
-    designamtion: "developer"
-};
+// let user = {
+//     username: "anu",
+//     company: "qspider",
+//     designamtion: "developer"
+// };
 // for (let i in user) { // iterating through keys and values
 //     console.log(i);
 //     console.log(user[i]);
@@ -207,9 +207,115 @@ let user = {
 // value.forEach(x => console.log(x));// iterating through values
 
 // objects into arrays
-let result = Object.entries(user);
+// let result = Object.entries(user);
+// console.log(result);
+// console.log(result.flat(1));
+// console.log(Array.isArray(result));
+
+
+// if it is a normal function with object this keyword goes to current object. and if it is arrow function
+// within object this keyword goes to window object.
+
+// let user1 = {
+//     username: "manu",
+//     company: "qspider",
+//     userdetails: function () {
+//         console.log(`My name is ${this.username} and i work for ${this.company}`);
+//     }
+// };
+
+// let user2 = {
+//     username: "arun",
+//     company: "jspider",
+// };
+
+// let user3 = {
+//     username: "madhu",
+//     company: "qspider"
+// };
+
+// console.log(user1.username);
+// console.log(user1.company);
+// console.log(user1.userdetails());
+
+// console.log(user2.username);
+// console.log(user2.company);
+
+// // here we are using call method only
+// let total = user1.userdetails.call(user2);
+// console.log(total);
+
+// console.log(user1.userdetails.call(user3));
+// console.log(user1.userdetails());
+
+// // Another example for the call method and apply method
+// let employee = {
+//     firstname: "mahu", lastname: "kumar"
+// };
+// let employee1 = {
+//     firstname: "rahul", lastname: "jha"
+// };
+// let employee2 = {
+//     firstname: "sameer", lastname: "jammwad"
+// };
+
+// function getFullName(salary, designation) {
+//     return this.firstname + this.lastname + " " + salary + " " + designation;
+// };
+
+// console.log(getFullName.call(employee));
+// console.log(getFullName.call(employee1, 20000, "developer"));
+
+// now apply method instead of call and see the difference
+// apply only works on array.
+// and call works on string
+
+// throw error CreateListFromArrayLike called on non-object
+// console.log(getFullName.apply(employee, 2000, "devd"));
+// console.log(getFullName.apply(employee2, [20000, "dev"]));
+
+// apply binder method Advanced topic ********************************
+let course = {
+    course_name: "java",
+    duration: "4months"
+};
+
+let course2 = {
+    course_name: "javascript",
+    duration: "4months"
+}
+
+function getCourse(trainer, ...skills) {
+    return this.course_name + `course-name is ${this.course_name}
+    duration ${this.duration} + trainer name ${trainer}+ skills are ${skills}`;
+}
+
+let java = getCourse.call(course);
+console.log(java);
+
+let javascript = getCourse.call(
+    "mernStack", "sashi", "javascript", 'htm', 'css', 'ecmascript'
+);
+
+let javaWtihApply = getCourse.apply(course, ["madhu", "java", "sql", "j2ee", "spring", "hibernate"]);
+let javascriptwithapply = getCourse.apply(course2, ["sashi", "javascript", "htm", "nodejs", "expressjs"]);
+
+console.log(javascript);
+console.log(javaWtihApply);
+console.log(javascriptwithapply);
+
+// Bind method
+let bound = getCourse.bind(course2, "sashi", "html", "css");
+console.log(bound());
+
+let numbers = { num1: 10 }
+function calculate(num2, num3) {
+    return this.num1 + num2 + num3;
+}
+let result = calculate.call(numbers, 10, 10);// if num3 is undefined output will be NAN
 console.log(result);
-console.log(result.flat(1));
-console.log(Array.isArray(result));
 
-
+let resultwithapply = calculate.apply(numbers, [20, 30]);
+let resultwithbind = calculate.bind(numbers, 10, 10);
+console.log(resultwithapply);
+console.log(resultwithbind()); // return a new bound function
