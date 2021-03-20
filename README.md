@@ -19,4 +19,5 @@
 # array methods reduce,reduceRight,forEach,flat,find,findindex.
 
 # object methods freeze,strict-mode, assign , ES6 key value shortcut,iterating through object key and values
+
 # object methods apply ,call and bind and there working

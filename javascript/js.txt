@@ -1,0 +1,3479 @@
+1. The behaviour of the instances present of a class inside a method is defined by __________
+a) Method
+b) Classes
+c) Interfaces
+d) Classes and Interfaces
+View Answer
+
+Answer: b
+Explanation: Objects of the class are also known as instances of the class. The behaviour of the instance of a class is defined by the class and is shared by all instances.
+
+2. The keyword or the property that you use to refer to an object through which they were invoked is _________
+a) from
+b) to
+c) this
+d) object
+View Answer
+
+Answer: c
+Explanation: ‘this’ keyword is used to refer to the object through which the properties or methods were invoked. This use of ‘this’ is a fundamental characteristic of the methods of any class.
+
+3. What will be the output of the following JavaScript code?
+
+var o = new F();
+o.constructor === F
+a) false
+b) true
+c) 0
+d) 1
+View Answer
+
+Answer: b
+Explanation: Constructor is a function property of the class which is used to create objects of that class. In the above code, both statements create an instance of the class.
+
+4. The basic difference between JavaScript and Java is _________
+a) There is no difference
+b) Functions are considered as fields
+c) Variables are specific
+d) Functions are values, and there is no hard distinction between methods and fields
+View Answer
+
+Answer: d
+Explanation: Java is an OOP programming language while JavaScript is an OOP scripting language. The basic difference between JavaScript and Java is that the functions are values, and there is no hard distinction between methods and fields.
+
+5. The meaning for Augmenting classes is that ___________
+a) objects inherit prototype properties even in a dynamic state
+b) objects inherit prototype properties only in a dynamic state
+c) objects inherit prototype properties in the static state
+d) object doesn’t inherit prototype properties in the static state
+View Answer
+
+Answer: a
+Explanation: JavaScript’s prototype-based inheritance mechanism is dynamic an object inherits properties from its prototype, even if the prototype changes after the object is created. This means that we can augment JavaScript classes simply by adding new methods to their prototype objects.
+
+6. The property of JSON() method is __________
+a) it can be invoked manually as object.JSON()
+b) it will be automatically invoked by the compiler
+c) it is invoked automatically by the JSON.stringify() method
+d) it cannot be invoked in any form
+View Answer
+
+Answer: c
+Explanation: A common use of JSON is to exchange data to/from a web server. When sending data to a web server, the data has to be a string. In that case json.strigify() is used to convert a javascript object into a string.
+
+7. When a class B can extend another class A, we say that?
+a) A is the superclass and B is the subclass
+b) B is the superclass and A is the subclass
+c) Both A and B are the superclass
+d) Both A and B are the subclass
+View Answer
+
+Answer: a
+Explanation: Superclass is the class from which subclasses are defined. Subclasses are also called extensions of superclass.therefore in the above scenario A will be superclass and B will be subclass.
+
+8. If A is the superclass and B is the subclass, then subclass inheriting the superclass can be represented as _________
+a) B=inherit(A);
+b) B=A.inherit();
+c) B.prototype=inherit(A);
+d) B.prototype=inherit(A.prototype);
+View Answer
+
+Answer: c
+Explanation: inherit() function is a predefined function in javascript which is used to inherit properties of another class. The subclass B inherits the prototype of the class A.
+
+9. The snippet that filters the filtered set is __________
+a) var t=new FilteredSet(s, {function(s) {return !(x instanceof Set);});
+b) var t=new FilteredSet{function(s) {return !(x instanceof Set);});
+c) var t=new FilteredSet(s, {function(s) {return (x instanceof Set);});
+d) var t=new FilteredSet(s, {function(s) {return x;});
+View Answer
+
+Answer: a
+Explanation: The instanceof operator is used to check the type of an object at run time. The instanceof operator returns a boolean value that indicates if an object is an instance of a particular class.
+
+10. The method that can be used to create new properties and also to modify the attributes of existing properties is _________
+a) Object.defineProperty()
+b) Object.defineProperties()
+c) Both Object.defineProperty() and Object.defineProperties()
+d) Object.inherit()
+View Answer
+
+Answer: c
+Explanation: The method Object.defineProperty() defines a new property directly on an object, or modifies an existing property on an object, and returns the object.Both Object.defineProperty() and Object.defineProperties() can be used todefine new properties.
+
+11. What will be the output of the following JavaScript code?
+
+const obj1 = 
+{  
+  	a: 10,  
+  	b: 15,  
+  	c: 18  
+};  
+const obj2 = Object.assign({c: 7, d: 1}, obj1);  
+console.log(obj2.c, obj2.d);
+a) 7,1
+b) 18,1
+c) Undefined
+d) Error
+View Answer
+
+Answer: a
+Explanation: The Object.assign() method is used to copy the properties and values of one object to another. Objects are assigned and copied by reference.
+
+12. What will be the output of the following JavaScript code?
+
+function person()
+{  
+        this.name = 'rahul';  
+}  
+function obj() 
+{  
+       obj.call(this)  
+}  
+obj.prototype = Object.create(person.prototype);  
+const app = new obj();  
+console.log(app.name);
+a) undefined
+b) runtime error
+c) compilation error
+d) rahul
+View Answer
+
+Answer: d
+Explanation: Object.create() method is used to create a new object with the specified properties. This is another way of creating a new object using specified object type. The particular function accepts two values as an argument.
+advertisement
+
+13. What will be the output of the following JavaScript code?
+
+const object1 = {};  
+Object.defineProperties(object1,
+{  
+  	property1: 
+        {  
+             value: 10 
+        }  
+ });  
+console.log(object1.property1);
+a) 0
+b) 10
+c) undefined
+d) error
+View Answer
+
+Answer: b
+Explanation: Object.defineProperties() is a predefined function in the object library of javascript.
+The Object.defineProperties() method defines new or modifies existing properties directly on an object and 
+returns the object.
+
+14. What will be the output of the following JavaScript code?
+
+const prototype1 = {};  
+const object1 = Object.create(prototype1);  
+console.log(Object.getPrototypeOf(object1) === prototype1);
+a) true
+b) false
+c) error
+d) 0
+View Answer
+
+Answer: a
+Explanation: The Object.getPrototypeOf() method of JavaScript returns the prototype value of the specified object.
+There are no inherited properties in this object.
+
+15. What will be the output of the following JavaScript code?
+
+const obj1 = {  
+  property1: 2  
+};  
+Object.seal(object1);    
+obj1.property1 =4;  
+console.log(obj1.property1);  
+delete obj1.property1;
+a) 2
+b) 4
+c) Error
+d) Undefined
+View Answer
+
+Answer: c
+Explanation: The seal property does not allow the object to be deleted. The object to be sealed is passed as an 
+argument, and the method returns the object which has been sealed.
+
+16.The four kinds of class members are ________
+a) Instance methods, Instance fields, Static method, Dynamic method
+b) Instance fields, Instance methods, Class fields, Class methods
+c) Instance fields, Non-instance fields, Dynamic methods, Global methods
+d) Global methods, Local methods, Dynamic methods, Static methods
+View Answer
+
+Answer: b
+Explanation: A class mainly contains data members and associated member functions. Therefore over all different kinds of class members are instance field, instance method, class fields and class methods.
+
+17. Different kinds of the object involved in a class definition are ________
+a) Public object, Private object, Protected object
+b) Constructor object, Function object, Destructor object
+c) Constructor object, Prototype object, Instance object
+d) Instance method, Static object, Dynamic object
+View Answer
+
+Answer: c
+Explanation: In JavaScript, there are three different objects involved in any class definition, and the properties of these three objects act like different kinds of class members namely, Constructor object, Prototype object, and Instance object.
+
+18. The object whose properties are inherited by all instances of the class, and properties whose values are functions behaving like instance methods of the class, is ________
+a) Instance object
+b) Constructor object
+c) Destructor object
+d) Prototype object
+View Answer
+
+Answer: d
+Explanation: The properties of the prototype object are inherited by all instances of the class, and properties whose values are functions behave like instance methods of the class.
+
+19. Which variables are used internally in object methods and are also globally visible?
+a) Object properties
+b) Variable properties
+c) Method properties
+d) Internal properties
+View Answer
+
+Answer: b
+Explanation: The variable properties are usually variables that are used internally in the object’s methods, but can also be globally visible variables that are used through the page.
+
+20. The class that represents the regular expressions is ________
+a) RegExpObj
+b) RegExpClass
+c) RegExp
+d) StringExp
+View Answer
+
+Answer: c
+Explanation: Regular expression is an object that describes a pattern of characters. The JavaScript RegExp class represents regular expressions, and both string and RegExp define methods that use regular expressions.
+
+21. The different variant of Date() constructor to create date object is/are ___________
+i. new Date(date)
+ii. new Date(milliseconds)
+iii. new Date(date string)
+iv. new Date(year, month, date[hour, minute, second, millisecond])
+a) i, ii and iii only
+b) ii, iii and iv only
+c) i, ii and iv only
+d) i, ii, iii and iv
+View Answer
+
+Answer: b
+Explanation: Date() is a predefined object type in javascript. There are 4 ways to create a new date object:new Date(), new Date(year, month, day, hours, minutes, seconds, milliseconds), new Date(milliseconds), new Date(date string).
+
+22. Which is the correct code that returns a complex number that is the complex conjugate of this one?
+a) Complex.prototype.conj = function() { return new Complex(this.r, -this.i); };
+b) Complex.prototype.conj = function() { return Complex(this.r, -this.i); };
+c) Complex.prototype.conj = function() { return (this.r, -this.i); };
+d) Complex.prototype.conj = function() { new Complex(this.r, -this.i); };
+View Answer
+
+Answer: a
+Explanation: Object.prototype.constructor specifies the function that creates the object prototype. The above code snippet returns a complex number that is the complex conjugate of this one.
+
+23. How can we make methods available on all objects?
+a) Object.add(methods)
+b) Object.methods(add)
+c) Object.add.methods(…)
+d) Object.prototype
+View Answer
+
+Answer: d
+Explanation: It is possible to add methods to Object.prototype, making them available on all objects. This is not recommended, however, because prior to ECMAScript5, there is no way to make these add-on methods non enumerable, and if you add properties to Object.prototype, those properties will be reported by all for/in loops.
+
+24. What is the procedure to add methods to HTMLElement so that they will be inherited by the objects that represent the HTML tags in the current document?
+a) HTMLElement.prototype(…)
+b) HTMLElement.prototype
+c) HTML.addmethods()
+d) HTML.elements(add)
+View Answer
+
+Answer: b
+Explanation: It is implementation-dependent whether classes defined by the host environment (such as the web browser) can be augmented using Object.prototype. In many web browsers, for example, you can add methods to HTMLElement.prototype and those methods will be inherited by the objects that represent the HTML tags in the current document.
+
+25. You can refresh the webpage in JavaScript by using ________
+a) window.reload
+b) location.reload
+c) window.refresh
+d) page.refresh
+View Answer
+
+Answer: b
+Explanation: The reload method is used to reload the current file. User can reload the page from the server through location. Reload.
+
+26. What will be the output of the following JavaScript code?
+
+   emp={id:102,name:"Shyam Kumar",salary:40000}  
+   document.write(emp.id+" "+emp.name+" "+emp.salary);
+a) 102 4000 Shyam Kumar
+b) 102 4000
+c) 102 Shyam Kumar 40000
+d) 102 shyam kumar 40000
+View Answer
+
+Answer: b
+Explanation: In this method, the object is created using literals. Property and Value are separated by colon.
+
+27. What will be the output of the following JavaScript code?
+
+function emp(id,name)
+{  
+    this.id=id;  
+    this.name=name;    
+}  
+e=new emp(103,"Vimal Jaiswal");  
+ 
+document.write(e.id+" "+e.name");
+a) 103 vimal jaiswal
+b) 103
+c) 103 Vimal Jaiswal
+d) Vimal jaiswal
+View Answer
+
+Answer: c
+Explanation: Object in the above code is created by passing arguments to the function. “this” keyword is used for defining the values.
+
+28. What will be the output of the following JavaScript code?
+
+advertisement
+
+var emp=new Object();  
+emp.name="Ravi Malik";  
+emp.salary=50000;  
+document.write("emp.name+" "+emp.salary);
+a) Ravi malik 5000
+b) Ravi Malik 50000
+c) Ravi malik
+d) 50000
+View Answer
+
+Answer: b
+Explanation: In the above code an object of class emp is made using the new operator. The above code prints the value of name and salary as defined in the object of the class.
+
+29. What will be the output of the following JavaScript code?
+
+function emp(name,salary)
+{  
+     this.name=name;  
+     this.salary=salary;  
+ 
+     this.changeSalary=changeSalary;  
+     function changeSalary(otherSalary)
+     {  
+         this.salary=otherSalary;  
+     }  
+}  
+e=new emp("Rahul",30000);  
+e.changeSalary(45000);  
+document.write("e.name+" "+e.salary);
+a) Rahul 30000
+b) Rahul
+c) Rahul 45000
+d) 45000
+View Answer
+
+Answer: c
+Explanation: The above code defines an additional method in JavaScript object. But before defining method, the property should be added in the function with the same name as method.
+
+30. What will be the output of the following JavaScript code?
+
+const obj = { 10: 'arry', 21: 'barry', 23: 'carry' };  
+console.log(Object.entries(obj)[2]);
+a) [“arry”, “10”]
+b) [“10”,”arry”]
+c) [“21”,barry”]
+d) [“23”,”carry”]
+View Answer
+
+Answer: d
+Explanation: Object.entries() method is used to return an array of a given object’s own [key, value] pairs.
+The ordering of the properties is the same as that given by looping over the property values of the object 
+manually.
+
+31.The functions provide() and require() of Dojo toolkit and Google’s Closure library are used for ___________
+a) declaring and loading modules
+b) declaring functions
+c) declaring modules
+d) loading modules
+View Answer
+
+Answer: a
+Explanation: Both the Dojo toolkit and Google’s Closure library define provide() and require() functions for declaring and loading modules.
+
+32. The maximum number of global symbols a module can define is ____________
+a) 2
+b) 3
+c) 1
+d) 4
+View Answer
+
+Answer: c
+Explanation: Generally, the various modules are allowed to run in the pristine (or near pristine) environment that it expects. The modules should minimize the number of global symbols they define – ideally, no module should define more than one.
+
+33. To define each of the set classes as a property of the sets object (namespace) for the module, the statement is
+a) sets = sets.AbstractEnumerableSet.extend();
+b) sets.SingletonSet = sets.AbstractEnumerableSet.extend(…);
+c) sets.SingletonSet = sets.extend(…);
+d) sets = sets.extend(…);
+View Answer
+
+Answer: b
+Explanation: Singleton is an object which can only be instantiated once. The extend keyword is used in class declarations or class expressions to create a class which is a child of another class. The sets object is the namespace for the module, and we define each of the set classes as a property of this object.
+
+34. What will be the efficiency quotient of the following JavaScript statements?
+
+var Set = sets.Set;
+var s = new Set(1,2,3);
+a) The programmer imports at once the frequently used values into the global namespace
+b) There is no efficiency quotient, the programmer tries to make it inefficient
+c) The programmer needs to import the Sets everytime he wants to use it
+d) the programmer imports the set everytime the statement is encountered
+View Answer
+
+Answer: a
+Explanation: A programmer can import frequently used values into the global namespace. A programmer who was going to make frequent use of the Set class from the sets namespace might import the class like that.
+
+35. The scope of a function is also called as ________
+a) Predefined function
+b) Module function
+c) Public function
+d) Private function
+View Answer
+
+Answer: b
+Explanation: The scope of a function can be used as a private namespace for a module. Therefore, the scope of a function is called a module function.
+
+36. Modules that have more than one item in their API can ________
+a) Assign itself to a global variable
+b) Invoke another module of the same kind
+c) Return a namespace object
+d) Invoke another module of the same kind
+View Answer
+
+Answer: c
+Explanation: Namespace is a container for a set of identifiers, functions, methods and all that. It gives a level of direction to its contents so that it will be well distinguished and organized. Modules that have more than one item in their API can return a namespace object.
+
+37. The provides() function and the exportsobject are used to _________
+a) Register the module’s API and Store their API
+b) Call the modules api
+c) Store the module’s API
+d) Register the modules api
+View Answer
+
+Answer: a
+Explanation: Frameworks that define module loading systems may have other methods of exporting a module’s API. There may be a provides() function for modules to register their API, or an exports object into which modules must store their API.
+
+38. What could be achieved by running the JavaScript code snippet below?
+
+var sets = com.davidflanagan.collections.sets;
+a) Importing a single module
+b) Importing a module partially
+c) Importing a namespace
+d) Importing the entire module
+View Answer
+
+Answer: d
+Explanation: Rather than importing individual classes, a programmer might import the entire module to the global namespace.
+
+39. The properties() method is a ________
+a) Enumerable method
+b) Non-enumerable method
+c) Operational method
+d) calling method
+View Answer
+
+Answer: b
+Explanation: The properties() is a method to get information of the properties of a particular object. properties() method is a non-enumerable method.
+
+40. What can be done in order to avoid the creation of global variables in JavaScript?
+a) To use a method that defines all the variables
+b) To use an object that has the reference to all the variables
+c) To use an object as its namespace
+d) To use global functions
+View Answer
+
+Answer: c
+Explanation: One way for a module to avoid the creation of global variables is to use an object as its namespace. Instead of defining global functions and variables, it stores the functions and values as properties of an object (which may be referenced to a global variable).
+
+41. What will be the output of the following JavaScript code?
+
+<p id="demo"></p>
+<script>
+var x = 123e5;
+document.getElementById("demo").innerHTML = x ;
+</script>
+a) 0.0123
+b) 12300
+c) Error
+d) Undefined
+View Answer
+
+Answer: b
+Explanation: Extra large or extra small numbers can be written with scientific (exponential) notation. The number followed by e tells about the number of digits in the number.
+advertisement
+
+42. What will be the output of the following JavaScript code?
+
+<p id="demo"></p>
+ <script>
+function myFunction() 
+{
+   var res = "";
+   res = res + Number.isFinite(5-2) ;
+   document.getElementById("demo").innerHTML = res;
+}
+</script>
+a) 3
+b) true
+c) false
+d) error
+View Answer
+
+Answer: b
+Explanation: The Number.isFinite() method determines whether a value is a finite number. This method returns true if the value is of the type Number, and equates to a finite number. Otherwise, it returns false.
+
+43. What will be the output of the following JavaScript code?
+
+<p id="demo"></p>
+ <script>
+function myFunction() 
+{
+   var res = "";
+   res = res + Number.isFinite(0 / 0);
+   document.getElementById("demo").innerHTML = res;
+}
+</script>
+a) 3
+b) true
+c) false
+d) error
+View Answer
+
+Answer: c
+Explanation: The Number.isFinite() method determines whether a value is a finite number. The above code results into an infinte number therefore the output will be false.
+
+44. What will be the output of the following JavaScript code?
+
+<p id="demo"></p>
+<script>
+function myFunction() 
+{
+   var res = "";
+   res = res + Number.isInteger('123');
+   document.getElementById("demo").innerHTML = res;
+}
+</script>
+a) True
+b) False
+c) Error
+d) Undefined
+View Answer
+
+Answer: b
+Explanation: The Number.isInteger() method determines whether a value an integer. This method returns true if the value is of the type Number.
+
+45. What will be the output of the following JavaScript code?
+
+<p id="demo"></p>
+<script>
+function myFunction() 
+{
+   var res = "";
+   res = res + Number.isInteger(0.5) + ": 0.5<br>";
+   document.getElementById("demo").innerHTML = res;
+}
+</script>
+a) true
+b) false
+c) error
+d) undefined
+View Answer
+
+Answer: b
+Explanation: isInteger method returns true if the value is of the type Number, and an integer (a number without decimals). Otherwise it returns false.
+
+46. What will be the output of the following JavaScript code?
+
+const pi=3.14;
+var pi=4;
+console.log(pi);
+a) This will flash an error
+b) Prints 4
+c) Prints 3.14
+d) Ambiguity
+View Answer
+
+Answer: a
+Explanation: Const keyword fixes the value of the variable. Const keyword can not be redefined. Therefore attempts to alter the value or re-declaration causes errors.
+
+47. The let keyword cannot be used ___________
+a) as a substitute of var
+b) as a block statement to define new variables
+c) to define variables that are scoped to a single expression
+d) in a else if loop, as a substitute for var
+View Answer
+
+Answer: d
+Explanation: The let keyword can be used in four ways :
+as a variable declaration like var;
+in a for or for/in loop, as a substitute for var;
+as a block statement, to define new variables and explicitly delimit their scope; and
+to define variables that are scoped to a single expression.
+
+48. The main difference between the variables declared with var and with let is __________
+a) var is confined to a particular function but let is not
+b) let is confined to a particular function but var is not
+c) var defines values based on conditions but let does not
+d) let doesn’t let you change the value of the variable
+View Answer
+
+Answer: b
+Explanation: Variables declared with var have global scope whereas variable declared with let have block scope. Variables declared with let are defined only within the closest enclosing block (and any blocks nested within it, of course).
+
+49. What will be the output of the following JavaScript code if oddsums(5); is executed after the following code snippet?
+
+function oddsums(n) 
+{
+     let total = 0, result=[]; 
+     for(let x = 1; x <= n; x++) 
+     { 
+        let odd = 2*x-1; 
+        total += odd;
+        result.push(total);
+     }
+     return result;
+}
+a) Returns [1,4,9,16,25]
+b) Returns [1,2,3,4,5]
+c) Returns [3,6,9,12,15]
+d) Returns [1,3,5,7,9]
+View Answer
+
+Answer: a
+Explanation: Let keyword has block scope thus in the above code snippet the total variable will be defined inside the for loop. The above code returns 1, 4, 9, 16, 25 which is the square of the first five natural numbers.
+
+50. What would be the result or type of error if p is not defined in the following JavaScript code snippet?
+
+console.log(p)
+a) Zero
+b) Null
+c) Reference Error
+d) Value not found Error
+View Answer
+
+Answer: c
+Explanation: Console.log() is a predefined function in javascript which is used to print data or message on the console. If the argument of the console.log is not defined it will give a reference error.
+
+51. What will be the output of the following JavaScript code?
+
+let x=x+1;
+console.log(x);
+a) 0
+b) Null
+c) Reference error
+d) NaN
+View Answer
+
+Answer: d
+Explanation: x has not been defined with any value hence the value of x+1 will be Nan. Therefore the console.log function will print NaN.
+
+52. What will be the output of the following JavaScript code?
+
+[x,y]=[y,x];
+a) Throws exception
+b) Swap the value of the two variables
+c) Flashes an error
+d) Creates a new reference object
+View Answer
+
+Answer: c
+Explanation: The above code snippet will flash an error message. This is due to the fact that the variables x and y are not defined.
+advertisement
+
+53. Which looping statement allows XML tags to appear in JavaScript programs and adds API for operating on XML data?
+a) for loop
+b) while loop
+c) for/each loop
+d) do while loop
+View Answer
+
+Answer: c
+Explanation: The for/each loop is a new looping statement standardized by E4X. E4X (ECMAScript for XML) is a language extension that allows XML tags to appear literally in JavaScript programs and adds syntax and API for operating on XML data.
+
+54. Which exception does the Iterators throw from their next() method when there are no more values to iterate, that work on finite collections?
+a) Exit Iteration
+b) Abort Iteration
+c) Abort
+d) Stop Iteration
+View Answer
+
+Answer: d
+Explanation: Iterators that work on finite collections throw Stop Iteration from their next() method when there are no more values to iterate. Stop Iteration is a property of the global object in JavaScript 1.7. Its value is an ordinary object (with no properties of its own) that is reserved for this special purpose of terminating iterations. Note, in particular,that Stop Iteration is not a constructor function like TypeError() or RangeError().
+
+55. Which method of the iterable object returns an iterator object for the collection?
+a) iterator()
+b) _iterator_()
+c) _iteration_()
+d) _return_iterator_()
+View Answer
+
+Answer: b
+Explanation: An iterable object represents a collection of values that can be iterated. An iterable object must define a method named __iterator__() (with two underscores at the start and end of the name) which returns an iterator object for the collection.
+
+56. What will be the output of the following JavaScript code?
+
+<p id="demo"></p>
+<script>
+function myFunction() 
+{
+   var res = "";
+   res=res + Number.isSafeInteger(Math.pow(2, 53)-1)+": 2<sup>53</sup>-1<br>";
+   document.getElementById("demo").innerHTML = res;
+}
+</script>
+a) True
+b) False
+c) Error
+d) Undefined
+View Answer
+
+Answer: a
+Explanation: The Number.isSafeInteger() method determines whether a value is a safe integer. A safe integer is an integer that can be exactly represented as an IEEE-754 double precision number (all integers from (253 – 1) to -(253 – 1)).
+
+57. What will be the output of the following JavaScript code?
+
+<p id="demo"></p>
+<script>
+function myFunction() 
+{
+   document.getElementById("demo").innerHTML = Number.MAX_VALUE;
+}
+</script>
+a) 1.7976931348623157e+308
+b) 1.7976931348623157e+305
+c) 1.7976931348623157e+307
+d) Error
+View Answer
+
+Answer: a
+Explanation: The MAX_VALUE property returns the largest number possible in JavaScript. This static property has a value of 1.7976931348623157e+308.
+
+58. What will be the output of the following JavaScript code?
+
+<p id="demo"></p>
+<script>
+function myFunction() 
+{
+   document.getElementById("demo").innerHTML = Number.NEGATIVE_INFINITY;
+}
+</script>
+a) -1000
+b) -infinity
+c) infinity
+d) undefined
+View Answer
+
+Answer: b
+Explanation: The NEGATIVE_INFINITY property represents negative infinity. Negative infinity can be explained as something that is lower than any other number.
+
+59. What will be the output of the following JavaScript code?
+
+<p id="demo"></p>
+<script>
+function myFunction() 
+{
+   var x = 100;
+   document.getElementById("demo").innerHTML = x.NEGATIVE_INFINITY;
+}
+</script>
+a) True
+b) False
+c) Error
+d) Undefiend
+View Answer
+
+Answer: d
+Explanation: NEGATIVE_INFINITY is a static property of the JavaScript Number object. Using x.NEGATIVE_INFINITY, where x is a number or a Number object, will return undefined.
+
+60. What will be the output of the following JavaScript code?
+
+<p id="demo"></p>
+<script>
+function myFunction() 
+{
+   var num = 5.56789;
+   var n = num.toExponential();
+   document.getElementById("demo").innerHTML = n;
+}
+</script>
+a) 5.56789e+0
+b) 5.57e+0
+c) 5.568e+0
+d) Error
+View Answer
+
+Answer: a
+Explanation: The toExponential() method converts a number into an exponential notation. It displays the number of digit according to the input passed to it.
+
+61.The Crockford’s subset does not include which function in JavaScript?
+a) eval()
+b) coeval()
+c) equal()
+d) equivalent()
+View Answer
+
+Answer: a
+Explanation: The Crockford’s subset does not include the with and continue statements or the eval() function. It defines functions using function definition expressions only and does not include the function definition statement.
+
+62. What does javascript use instead of == and !=?
+a) It uses bitwise checking
+b) It uses === and !== instead
+c) It uses equals() and notequals() instead
+d) It uses equalto()
+View Answer
+
+Answer: b
+Explanation: The subset does not include the comma operator, the bitwise operators, or the ++ and — operators. It also disallows == and != because of the type conversion they perform, requiring use of === and !== instead.
+
+63. What is being imposed on each subset to ensure that it conforms to the subset?
+a) A parser to parse the code
+b) A parser that parses and adds to the subset
+c) A static verifier that parses code
+d) A predefined function to parse the code
+View Answer
+
+Answer: c
+Explanation: Each subset is coupled with a static verifier that parses code to ensure that it conforms to the subset.
+
+64. Why was “The Good Parts” designed as a language subset in JavaScript?
+a) To improve programmer flexibility
+b) To balance the workload of the programmer
+c) To create an in-built compiler and interpreter
+d) To improve programmer productivity
+View Answer
+
+Answer: d
+Explanation: The Good Parts is a language subset designed for aesthetic reasons and with a desire to improve programmer productivity. There is a larger class of subsets that have been designed for the purpose of safely running untrusted JavaScript in a secure container or “sandbox”.
+
+65. Which is the subset that is a secure container designed for the purpose of safely running untrusted JavaScript?
+a) Sandbox
+b) The Good Parts
+c) Both Sandbox and Good Parts
+d) Web browser
+View Answer
+
+Answer: a
+Explanation: There is a larger class of subsets that have been designed for the purpose of safely running untrusted JavaScript in a secure container or “sandbox”.
+
+66. Why is this keyword not preferred in JavaScript?
+a) Highly memory consuming
+b) Functions should access the global objects
+c) Functions should not access the global objects
+d) Very inefficient to use
+View Answer
+
+Answer: c
+Explanation: The this keyword is forbidden or restricted because functions (in non-strict mode) can access the global object through this. Preventing access to the global object is one of the key purposes of any sandboxing system.
+
+67. Which are the two functions that are not allowed in any secure subset?
+a) evaluate() and restrict()
+b) eval() and the Function() constructor
+c) debugger() and test()
+d) eval() and debugger()
+View Answer
+
+Answer: b
+Explanation: eval() and the Function() constructor are not allowed in any secure subset because they allow the execution of arbitrary strings of code, and these strings cannot be statically analyzed.
+
+68. Which is the object that defines methods that allow complete control over page content?
+a) The client-side document object
+b) The server-side document object
+c) Both client-side and server-side document object
+d) Web document object
+View Answer
+
+Answer: a
+Explanation: A web page is divided into two object documents in which one is client-side document object and the other is server-side document object. The client-side document object defines methods that allow complete control over page content
+
+69. Which was one of the first security subsets proposed?
+a) FBJS
+b) Caja
+c) dojox.secure
+d) ADSafe
+View Answer
+
+Answer: d
+Explanation: ADsafe was one of the first security subsets proposed) It was created by Douglas Crockford (who also defined The Good Parts subset). ADsafe relies on static verification only, and it uses JSLint as its verifier. It forbids access to most global variables and defines an ADSAFE variable that provides access to a secure API, including special-purpose DOM methods. ADsafe is not in wide use, but it was an influential proof-of-concept that influenced other secure subsets.
+
+70. Which is the subset that transforms web content into secure modules that can be safely hosted on a web page?
+a) Microsoft Web Sandbox
+b) ADsafe
+c) Caja
+d) dojox.secure
+View Answer
+
+Answer: d
+Explanation: Caja is Google’s open-source secure subset. Caja (Spanish for “box”) defines two language subsets. Cajita (“little box”) is a narrow subset like that used by ADsafe and dojox.secure. Valija (“suitcase” or “baggage”) is a much broader language that is close to regular ECMAScript 5 strict mode (with the removal of eval()). Caja itself is the name of the compiler that transforms (or “cajoles”) web content (HTML, CSS, and JavaScript code) into secure modules that can be safely hosted on a web page without being able to affect the page as a whole or other modules on the page.
+
+71. What will be the output of the following JavaScript code?
+
+var set = new Set();  
+set.add("one");  
+set.add("two");    
+for (let elements of set) 
+{  
+    document.writeln(elements+" ");  
+}
+a) one
+b) two
+c) one two
+d) undefined
+View Answer
+
+Answer: c
+Explanation: The JavaScript Set add() method is used to add an element to Set object with a specified value. Each element must have a unique value.
+
+72. What will be the output of the following JavaScript code?
+
+set.add("AngularJS");  
+set.add("Bootstrap");    
+set.delete("Bootstrap");  
+document.writeln(set.size);
+a) 2
+b) 1
+c) 0
+d) Undefined
+View Answer
+
+Answer: b
+Explanation: The delete() method is used to remove all the elements from the Set object which are passed as an argument to the delete function. Since the delete function is called once the size will be reduced to 1.
+
+73. What will be the output of the following JavaScript code?
+
+advertisement
+
+set.add("one");  
+set.add("two");  
+set.add("three");    
+set.clear();  
+document.writeln(set.size);
+a) one
+b) 1
+c) 2
+d) 0
+View Answer
+
+Answer: d
+Explanation: JavaScript Set clear() method is used to remove all the elements from Set object. The clear method will remove all the entries and hence the size of the set will be zero.
+
+74. What will be the output of the following JavaScript code?
+
+set.add("one");  
+set.add("two”);
+var itr=set.values();  
+document.writeln(itr.next().value);
+a) one
+b) two
+c) error
+d) undefined
+View Answer
+
+Answer: a
+Explanation: values() method returns an object of new Set iterator. This object contains the value for each element. It maintains insertion order.
+
+75. What will be the output of the following JavaScript code?
+
+set.add("1");  
+set.add("2");    
+document.writeln(set.has("3"));
+a) 3
+b) true
+c) false
+d) 2
+View Answer
+
+Answer: c
+Explanation: The Set has() method indicates whether the Set object contains the specified value. It returns true if the specified value is present,
+otherwise false.
+
+76.The ‘$’ present in the RegExp object is called a ____________
+a) character
+b) matcher
+c) metacharacter
+d) metadata
+View Answer
+
+Answer: c
+Explanation: The ‘S’ is a special metacharacter that matches the end of a string. It is used to define or access elements in jquery.
+
+77. Consider the following JavaScript statement containing regular expressions and check if the pattern matches?
+
+var text = "testing: 1, 2, 3"; 
+var pattern = /\d+/g;
+a) text==pattern
+b) text.equals(pattern)
+c) text.test(pattern)
+d) pattern.test(text)
+View Answer
+
+Answer: d
+Explanation: The given pattern is applied to the text given in the parenthesis. The test() method tests for a match in a string. This method returns true if it finds a match, otherwise it returns false.
+
+78. The regular expression to match any one character not between the brackets is __________
+a) […]
+b) [^]
+c) [^…]
+d) [\D]
+View Answer
+
+Answer: c
+Explanation: RegExp defines a special set of character that is used to do manipulation on strings and other variables. The [^…] character class is used to match or draw any one character not between the brackets.
+
+79. What does /[^(]* regular expression indicate?
+a) Match one or more characters that are not open parenthesis
+b) Match zero or more characters that are open parenthesis
+c) Match zero or more characters that are not open parenthesis
+d) Match one or more characters that are open parenthesis
+View Answer
+
+Answer: c
+Explanation: The [^…] character class is used to match or draw any one character not between the brackets. One should always be careful while using * and ? as repetition characters as they may match zero instances of whatever precedes them, they are allowed to match nothing.
+
+80. What will be the result when non greedy repetition is used on the pattern /a+?b/?
+a) Matches the letter b preceded by the fewest number of a’s possible
+b) Matches the letter b preceded by any number of a
+c) Matches letter a preceded by letter b, in the stack order
+d) Matches letter a present in the string
+View Answer
+
+Answer: a
+Explanation: Using non greedy repetition may not always produce the results you expect. /a+?b/ matches the letter b preceded by the fewest number of a’s possible.
+
+81. What does the subexpression /java(script)?/ result in?
+a) It matches “java” followed by the optional “script”
+b) It matches “java” followed by any number of “script”
+c) It matches “java” followed by a minimum of one “script”
+d) It matches “java” followed by a single “script”
+View Answer
+
+Answer: a
+Explanation: paranthesis () check for the optional presence of the argument in the string. subexpression /java(script)?/ matches “java” followed by the optional “script”.
+
+82. What is the most essential purpose of parentheses in regular expressions?
+a) Define pattern matching techniques
+b) Define subpatterns within the complete pattern
+c) Define portion of strings in the regular expression
+d) matching the complete string
+View Answer
+
+Answer: b
+Explanation: When a regular expression is successfully matched against a target string, it is possible to extract the portions of the target string that matched any particular paranthesized subpattern. The essential purpose of parantheses in regular expressions is to define subpatterns within the complete pattern.
+
+83. The method that performs the search-and-replace operation to strings for pattern matching is _______
+a) searchandreplace()
+b) add()
+c) edit()
+d) replace()
+View Answer
+
+Answer: d
+Explanation: The replace() method performs a search-and-replace operation. It takes a regular expression as its first argument and a replacement string as its second argument.
+
+84. What would be the result of the following statement in JavaScript using regular expression methods?
+a) Returns [“123″”456″”789”]
+b) Returns [“123″,”456″,”789”]
+c) Returns [1,2,3,4,5,6,7,8,9]
+d) Throws an exception
+View Answer
+
+Answer: b
+Explanation: The split() method can take regular expressions as its arguments. The split() method generally breaks the string on which it is called into an array of substrings, using the argument as a separator.
+
+85. What will be the purpose of exec() in the following JavaScript code?
+
+    var pattern = /Java/g;
+    var text = "JavaScript is more fun than Java!";
+    var result;
+    while ((result = pattern.exec(text)) != null) 
+    {
+        alert("Matched '" + result[0] + "'" +" at position " + result.index +"; 
+              next search begins at " + pattern.lastIndex);
+    }
+a) Returns the same kind of array whether or not the regular expression has the global g flag
+b) Returns different arrays in the different turns of iterations
+c) Return a sub part of the array
+d) Returns a null value
+View Answer
+
+Answer: a
+Explanation: exec() returns the same kind of array whether or not the regular expression has the global g flag. Recall that match() returns an array of matches when passed a global regular expression. exec(), by contrast, always returns a single match and provides complete information about that match. When exec() is called on a regular expression that has the g flag, it sets the lastIndex property of the regular expression object to the character position immediately following the matched substring. When exec() is invoked a second time for the same regular expression, it begins its search at the character position indicated by the lastIndex property. If exec() does not find a match, it resets lastIndex to 0.
+
+86. What will be the output of the following JavaScript code?
+
+       System.out.println(Pattern.matches("[amn]", "abcd"));
+a) true
+b) false
+c) undefined
+d) a
+View Answer
+
+Answer: b
+Explanation: The pattern.matches method tests whether the regular expression matches the pattern. The above code will result into false as string “abcd” is not among a, m, or n.
+advertisement
+
+87. What will be the output of the following JavaScript code?
+
+System.out.println(Pattern.matches("[amn]?", "a"));
+a) true
+b) false
+c) undefined
+d) bcd
+View Answer
+
+Answer: a
+Explanation: The above code tests for single occurrence of the character in a particular string. The symbol ? is used along with the “[]” for testing single occurrence.
+
+88. What will be the output of the following JavaScript code?
+
+     System.out.println(Pattern.matches("\\d", "1"));
+a) true
+b) false
+c) undefined
+d) 1
+View Answer
+
+Answer: a
+Explanation: The above code tests for single occurrence of digit. //d returns true when there is any digits occurring one time.
+
+89. What will be the output of the following JavaScript code?
+
+   System.out.println(Pattern.matches("[adf]+", "a"));
+a) true
+b) false
+c) undefined
+d) 0
+View Answer
+
+Answer: a
+Explanation: “+” sign in regex checks for more than one time occurrence of a particular character. It returns true if a character from the set is present more than once.
+
+90. What will be the output of the following JavaScript code?
+
+    System.out.println(Pattern.matches("[^abc]", "aemngq"));
+a) true
+b) false
+c) undefined
+d) 1
+View Answer
+
+Answer: b
+Explanation: “^” is used as a negation operator. The above code will print false as “a” is present in the string passed in the argument.
+
+91.Which of the following is a way of embedding Client-side JavaScript code within HTML documents?
+a) From javascript:encoding
+b) External file specified by the src attribute of a “script” tag
+c) By using a header tag
+d) By using body tag
+View Answer
+
+Answer: b
+Explanation: The Client-side JavaScript code is embedded within HTML documents in four ways :
+Inline, between a pair of “script” tags
+From an external file specified by the src attribute of a “script” tag
+In an HTML event handler attribute, such as onclick or onmouseover
+In a URL that uses the special javascript: protocol.
+
+92. When does JavaScript code appear inline within an HTML file?
+a) Between the “script” tag
+b) Outside the “script” tag
+c) Between or Outside the “script” tag
+d) Between the header tag
+View Answer
+
+Answer: a
+Explanation: JavaScript code can appear inline within an HTML file between the “script” tags. Javascript can also be included from an external file specified by the src attribute of a “script” tag.
+
+93. Which character in JavaScript code will be interpreted as XML markup?
+a) !
+b) >
+c) &
+d) .
+View Answer
+
+Answer: c
+Explanation: If your JavaScript code contains the < or & characters, these characters are interpreted as XML markup. Element tags must begin with the < character, and entities and character references in an XML document must begin with the & character.
+
+94. Which is the root element in a HTML document?
+a) HTML
+b) HEAD
+c) SCRIPT
+d) BODY
+View Answer
+
+Answer: a
+Explanation: The “html” tag is the root element of any HTML document regardless of it containing a JavaScript code or not. Body tag includes the main content that is shown on the website.
+
+95. What is the code for getting the current time?
+a) now = new Date();
+b) var now = new Date();
+c) var now = Date();
+d) var now = new Date(current);
+View Answer
+
+Answer: b
+Explanation: Date() is a predefined function in javascript which returns the date in string form. The above code determines the current time and stores it in the variable “now”.
+
+96. What is the code to start displaying the time when the document loads?
+a) onload = displayTime;
+b) window. = displayTime;
+c) window.onload = displayTime;
+d) window.onload = start;
+View Answer
+
+Answer: c
+Explanation: window.onload is used to access the screen while the page is loading. The above code starts displaying the time when the document loads.
+
+97. One of the main advantage of using src attribute is ____________
+a) It becomes self-cached
+b) It makes the HTML file modular
+c) It restricts manipulation in the HTML file
+d) It simplifies the HTML files
+View Answer
+
+Answer: d
+Explanation: The main advantage of using the src attribute is that it simplifies your HTML files by allowing you to remove large blocks of JavaScript code from them. Hence separate files for css and javascript files are made to make the code modular and readable.
+
+98. What will be done if more than one page requires a file of JavaScript code?
+a) Downloads that many times
+b) Retrives from the browser cache
+c) Must be re executed
+d) Must be included in all the pages
+View Answer
+
+Answer: b
+Explanation: If a file of JavaScript code is shared by more than one page, it only needs to be downloaded once, by the first page that uses it—subsequent pages can retrieve it from the browser cache. This makes the loading process easier and hence faster.
+
+99. What is the default value of the type attribute?
+a) text/css
+b) text/javascript
+c) html
+d) xml
+View Answer
+
+Answer: b
+Explanation: The default value of the type attribute is “text/javascript”. You can specify this type explicitly if you want, but it is never necessary.
+
+100. The language is commonly used to __________________
+a) Specify the user’s language
+b) Specify the language going to be scripted
+c) No longer in use
+d) Specify the programmer’s favourable language
+View Answer
+
+Answer: c
+Explanation: The language attribute specifies the natural language of the content of a web page. The language attribute is deprecated and should no longer be used.
+
+101. What will be the output of the following JavaScript code?
+
+<p id="demo"></p>
+<script>
+var numbers1 = [4, 9];
+var numbers2 = numbers1.map(myFunction);
+document.getElementById("demo").innerHTML = numbers2;
+function myFunction(value, index, array) 
+{
+  return value * 2;
+}
+</script>
+a) 8 9
+b) 8 18
+c) 4 9
+d) Error
+View Answer
+
+Answer: b
+Explanation: Map function creates a new array by performing a function on each array element. myFunction multiplies each value with 2.
+
+102. What will be the output of the following JavaScript code?
+
+<p id="demo"></p>
+<script>
+var numbers = [45, 4, 9, 16, 25];
+var ans = numbers.reduce(myFunction);
+document.getElementById("demo").innerHTML = sum;
+function myFunction(total, value, index, array) 
+{
+  return total + value;
+}
+</script>
+a) 100
+b) 99
+c) 0
+d) error
+View Answer
+
+Answer: b
+Explanation: Reduce function reduces the array values to a single variable. The function returns the sum of array elements.
+
+103. What will be the output of the following JavaScript code?
+
+advertisement
+
+<p id="demo"></p>
+<script>
+var numbers = [45, 4, 9, 16, 25];
+var arr= numbers.every(myFunction);
+document.getElementById("demo").innerHTML =arr;
+function myFunction(value, index, array) 
+{
+   return value > 18;
+}
+</script>
+a) true
+b) false
+c) 0
+d) error
+View Answer
+
+Answer: b
+Explanation: The every() method checks if all array values pass a test. The function tests if all the values are greater than 18 or not.
+
+104. What will be the output of the following JavaScript code?
+
+<p id="demo"></p>
+<script>
+var numbers = [45, 4, 9, 16, 25];
+var someOver18 = numbers.some(myFunction);
+document.getElementById("demo").innerHTML = "Some over 18 is " + someOver18;
+function myFunction(value, index, array) 
+{
+  return value > 10;
+}
+</script>
+a) True
+b) False
+c) Error
+d) Undefined
+View Answer
+
+Answer: a
+Explanation: The some() method checks if some array values pass a test. Since some of the values are greater than 10 the answer will be true.
+
+105. What will be the output of the following JavaScript code?
+
+<p id="demo"></p>
+<script>
+var arr = ["1", "1", "2", "1"];
+var a = arr.lastIndexOf("1");
+document.getElementById("demo").innerHTML = (a + 1);
+</script>
+a) 2
+b) 3
+c) 4
+d) 0
+View Answer
+
+Answer: c
+Explanation: The lastindexof method returns the last occurrence of element in the array. The last occurrence of 1 is at index 4.
+
+106.Which function among the following lets to register a function to be invoked once?
+a) setTimeout()
+b) setTotaltime()
+c) setInterval()
+d) settime()
+View Answer
+
+Answer: a
+Explanation: setTimeout() and setInterval() allow you to register a function to be invoked once or repeatedly after a specified amount of time has elapsed. Both these function are used to do time manipulation in javascript.
+
+107. Which function among the following lets to register a function to be invoked repeatedly after a certain time?
+a) setTimeout()
+b) setTotaltime()
+c) setInterval()
+d) settime()
+View Answer
+
+Answer: c
+Explanation: setTimeout() and setInterval() allow you to register a function to be invoked once or repeatedly after a specified amount of time has elapsed. Both these function are used to do time manipulation in javascript.
+
+108. Which is the handler method used to invoke when uncaught JavaScript exceptions occur?
+a) Onhalt
+b) Onerror
+c) Both onhalt and onerror
+d) Onsuspend
+View Answer
+
+Answer: b
+Explanation: The onerror handler method can be registered to be invoked when uncaught JavaScript exceptions occur. The onerror event is triggered if an error occurs while loading an external file (e.g. a document or an image).
+
+109. Which property is used to obtain browser vendor and version information?
+a) modal
+b) version
+c) browser
+d) navigator
+View Answer
+
+Answer: d
+Explanation: The navigator property is used to obtain browser vendor and version information. Various navaigator property includes appname, appversion, geolocation, language etc.
+
+110. Which method receives the return value of setInterval() to cancel future invocations?
+a) clearInvocation()
+b) cancelInvocation()
+c) clearInterval()
+d) clear()
+View Answer
+
+Answer: c
+Explanation: Like setTimeout(), setInterval() returns a value that can be passed to clearInterval() to cancel any future invocations of the scheduled function. The ID value returned by setInterval() is used as the parameter for the clearInterval() method.
+
+111. The setTimeout() belongs to which object?
+a) Element
+b) Window
+c) Location
+d) Event
+View Answer
+
+Answer: b
+Explanation: The setTimeout() method of the Window object schedules a function to run after a specified number of milliseconds elapses. setTimeout() and setInterval() are used for time manipulations in javascript.
+
+112. Which method receives the return value of setTimeout() to cancel future invocations?
+a) clearTimeout()
+b) clearInterval()
+c) clearSchedule()
+d) cancelInvocation()
+View Answer
+
+Answer: a
+Explanation: setTimeout() returns a value that can be passed to clearTimeout() to cancel the execution of the scheduled function. The ID value returned by setTimeout() is used as the parameter for the clearTimeout() method.
+
+113. What will happen if we call setTimeout() with a time of 0 ms?
+a) Placed in stack
+b) Placed in queue
+c) Will run continuously
+d) Will execute immediately
+View Answer
+
+Answer: b
+Explanation: If you call setTimeout() with a time of 0 ms, the function you specify is not invoked right away. Instead, it is placed on a queue to be invoked “as soon as possible” after any currently pending event handlers finish running.
+
+114. To which object does the location property belong?
+a) Window
+b) Position
+c) Element
+d) Location
+View Answer
+
+Answer: a
+Explanation: The location property of the Window object refers to a Location object, which represents the current URL of the document displayed in the window. The window.location object can be used to get the current page address (URL) and to redirect the browser to a new page.
+
+115. What is the result of the following code snippet?
+
+window.location === document.location
+a) False
+b) True
+c) 0
+d) 1
+View Answer
+
+Answer: b
+Explanation: The window.location object can be used to get the current page address (URL) and to redirect the browser to a new page. The Document.location read-only property returns a Location object, which contains information about the URL of the document and provides methods for changing that URL and loading another URL.
+
+116. What will be the output of the following JavaScript code?
+
+function getcube()
+{  
+    var number=document.getElementById("number").value;  
+    alert(number*number*number);  
+}  
+<form>  
+     Enter No:<input type="text" id="number" name="number"/><br/>  
+     <input type="button" value="3" onclick="getcube()"/>  
+</form>
+a) 9
+b) 27
+c) Error
+d) Undefined
+View Answer
+
+Answer: b
+Explanation: The document.getElementById() is used to get value of the input text. But we need to define id for the input field.
+
+117. What will be the output of the following JavaScript code?
+
+function totalelements()  
+{  
+    var allgenders=document.getElementsByName("gender");  
+    alert("Total Genders:"+allgenders.length);  
+}  
+<form>  
+     <input type="radio" name="gender" value="male">  
+     <input type="radio" name="gender" value="female">  
+     <input type="button" onclick="totalelements()" value="Total Genders">  
+</form>
+a) 0
+b) Error
+c) 2
+d) 1
+View Answer
+
+Answer: c
+Explanation: The document.getElementsByName() method returns all the element of specified name. The above code counts the total number of output mentioned in the form.
+advertisement
+
+118. What will be the output of the following JavaScript code?
+
+function counth2()
+{  
+    var totalh2=document.getElementsByTagName("h2");  
+    alert("totalh2.length);  
+}  
+<h2>hello</h2>  
+<h2>hello</h2>
+a) 0
+b) hello
+c) h2
+d) 2
+View Answer
+
+Answer: d
+Explanation: The document.getElementsByTagName() method returns all the element of specified tag name. The above code counts the total number of specific tags.
+
+119. What will be the output of the following JavaScript code?
+
+function validate() 
+{  
+    var msg;  
+    if(document.myForm.userPass.value.length>5)
+    {  
+        msg="good";  
+    }  
+    else
+    {  
+         msg="poor";  
+    }  
+    document.getElementById('mylocation').innerText=msg;  
+}  
+<form name="myForm">  
+<input type="password" value="rhuld"  onkeyup="validate()">  
+Strength:<span id="mylocation">no strength</span>  
+</form>
+a) Strength: good
+b) Strength: poor
+c) Strength: no strength
+d) Undefined
+View Answer
+
+Answer: b
+Explanation: The innerText property can be used to write the dynamic text on the html document. It is used mostly in the web pages to generate dynamic content such as writing the validation message, password strength etc.
+
+120. What will be the output of the following JavaScript code?
+
+function showcommentform() 
+{  
+    var data=”new text”  
+    document.getElementById('mylocation').innerHTML=data;  
+}  
+<form name="myForm">  
+<input type="button" value="comment" onclick="showcommentform()">  
+<div id="mylocation"></div> 
+</form>
+a) Comment
+b) new text
+c) Error
+d) Undefined
+View Answer
+
+Answer: a
+Explanation: The innerHTML property can be used to write the dynamic html on the html document. It is used mostly in the web pages to generate dynamic 
+html such as registration form, comment form, links etc.
+
+121.What is the code snippet to go back to a history twice?
+a) history(2);
+b) history(-2);
+c) history.go(-2);
+d) history.go(2);
+View Answer
+
+Answer: c
+Explanation: The go() method loads a specific URL from the history list. The above code snippet goes back 2, like clicking the Back button twice.
+
+122. If the window has child windows, how will the browsing histories be affected?
+a) Numerically interleaved
+b) Chronologically interleaved
+c) Both Numerically and Chronologically interleaved
+d) Numerically or Chronologically interleaved
+View Answer
+
+Answer: b
+Explanation: If a window contains child windows, the browsing histories of the child windows are chronologically interleaved with the history of the main window. The opener property returns a reference to the window that created the window.
+
+123. The length property belongs to which of the following objects?
+a) Window
+b) Element
+c) History
+d) Document
+View Answer
+
+Answer: c
+Explanation: The length property of the History object specifies the number of elements in the browsing history list. The property returns at least 1, because the list includes the currently loaded page.
+
+124. What is the datatype of the go() method’s parameter?
+a) String
+b) Integer
+c) Double
+d) Float
+View Answer
+
+Answer: b
+Explanation: The go() method takes an integer argument and can skip any number of pages forward and backward in the history list.
+
+125. What is the special feature of modern web applications?
+a) Can alter contents without loading document
+b) Must load the document to manipulate
+c) Remains static
+d) Can’t be altered at all
+View Answer
+
+Answer: a
+Explanation: Modern web applications can dynamically alter their own content without loading a new document.
+
+126. The navigator property belongs to which of the following object?
+a) Document
+b) Window
+c) Navigator
+d) Location
+View Answer
+
+Answer: c
+Explanation: The navigator property of a Window object refers to a Navigator object that contains browser vendor and version number information. Navigator object property includes appCodeName, appVersion, appName etc.
+
+127. What is the vendor-neutral synonym for navigator?
+a) staticData
+b) purposeInformation
+c) dataInformation
+d) clientInformation
+View Answer
+
+Answer: d
+Explanation: IE supports clientInformation as a vendor-neutral synonym for a navigator. The navigator property of a Window object refers to a Navigator object that contains browser vendor and version number information.
+
+128. Which is the preferred testing nowadays for scripting?
+a) Software testing
+b) Feature testing
+c) Blackbox testing
+d) Whitebox testing
+View Answer
+
+Answer: b
+Explanation: The “browser-sniffing” approach is problematic because it requires constant tweaking as new browsers and new versions of existing browsers are introduced. Today, feature testing is preferred rather than making assumptions about particular browser versions and their features, you simply test for the feature (i.e., the method or property) you need.
+
+129. Which of the below properties can be used for browser sniffing?
+a) platform
+b) appVersion
+c) both platform and appVersion
+d) appName
+View Answer
+
+Answer: c
+Explanation: The platform and appVersion can be found out in the navigator object properties.
+
+130. Where is the information of the userAgent property located?
+a) appId
+b) appName
+c) platform
+d) appVersion
+View Answer
+
+Answer: d
+Explanation: The string that the browser sends in its USER-AGENT HTTP header. This property typically contains all the information in appVersion and may contain additional details as well.
+
+131. What will be the output of the following JavaScript code?
+
+function myFunction() 
+{
+    document.getElementById("demo").innerHTML = Boolean(10 > 9);
+}
+a) true
+b) false
+c) error
+d) 0
+View Answer
+
+Answer: a
+Explanation: The boolean function returns the boolean values. Since 10 is greater than 9 the boolean function returns true.
+
+132. What will be the output of the following JavaScript code?
+
+var b5 = Boolean('false');
+document.getElementById("demo").innerHTML =b5;
+a) False
+b) True
+c) Error
+d) Undefined
+View Answer
+
+Answer: b
+Explanation: The boolean function returns the boolean values. The boolean function returns true for any non empty string even if the string is false.
+
+133. What will be the output of the following JavaScript code?
+
+advertisement
+
+function myFunction() 
+{
+  var x = "";
+  document.getElementById("demo").innerHTML = Boolean(x);
+}
+a) true
+b) false
+c) 0
+d) 1
+View Answer
+
+Answer: b
+Explanation: When an empty string is passed to the boolean function then the function returns false. The boolean function returns true or false according to the input passed to it.
+
+134. What will be the output of the following JavaScript code?
+
+function myFunction() 
+{
+   var x = 10 / "H";
+   document.getElementById("demo").innerHTML = Boolean(x);
+}
+a) True
+b) False
+c) Error
+d) Undefined
+View Answer
+
+Answer: b
+Explanation: The value return by the boolean method depends on the input passed to it. The NaN value when passed to the boolean function returns false.
+
+135. What will be the output of the following JavaScript code?
+
+function myFunction() 
+{
+   var x = null;
+   document.getElementById("demo").innerHTML = Boolean(x);
+}
+a) True
+b) False
+c) Error
+d) Undefined
+View Answer
+
+Answer: b
+Explanation: The value return by the boolean method depends on the input passed to it. The NULL value when passed to the boolean function returns false.
+
+136. Each tab in the single web browser window is called as ____________
+a) Browser Information
+b) Browsing context
+c) Both Browser Information & Browsing context
+d) Browser Log
+View Answer
+
+Answer: b
+Explanation: A single web browser window on your desktop may contain several tabs. Each tab is an independent browsing context. browser context is also defined as the environment in which the browser displays a document.
+
+137. Nested documents inside the HTML documents can be created using ___________
+a) frame
+b) nest
+c) iframe
+d) into
+View Answer
+
+Answer: c
+Explanation: HTML documents may contain nested documents using an iframe element. An iframe creates a nested browsing context represented by a Window object of its own.
+
+138. How are windows, tabs, iframes, and frames treated according to client-side javascript?
+a) They are all browsing contexts
+b) They are all browsing information
+c) They are all Window contexts
+d) They are all Window objects
+View Answer
+
+Answer: a
+Explanation: Client-side JavaScript makes very little distinction between windows, tabs, iframes, and frames they are all browsing contexts, and to JavaScript, they are all Window objects.
+
+139. How are windows, tabs, iframes, and frames treated according to javascript?
+a) They are all browsing contexts
+b) They are all browsing information
+c) They are all Window contexts
+d) They are all Window objects
+View Answer
+
+Answer: d
+Explanation: Client-side JavaScript makes very little distinction between windows, tabs, iframes, and frames they are all browsing contexts, and to JavaScript, they are all Window objects.
+
+140. A new web browser window can be opened using which method of the Window object?
+a) createtab()
+b) Window.open()
+c) open()
+d) create()
+View Answer
+
+Answer: b
+Explanation: You can open a new web browser window with the open() method of the Window object. Window.open() loads a specified URL into a new or existing window and returns the Window object that represents that window.
+
+141. What will happen if the first argument of open() is omitted?
+a) Error Page
+b) Remains in the same page
+c) about:blank
+d) Reloads the page
+View Answer
+
+Answer: b
+Explanation: The first argument in the open function is for the url of the page which is to be opened. When the first argument of the open() is omitted, the about:blank is opened.
+
+142. Which object serves as the global object at the top of the scope chain?
+a) Hash
+b) Property
+c) Element
+d) Window
+View Answer
+
+Answer: d
+Explanation: The Window object serves as the global object at the top of the scope chain in client-side JavaScript. All global JavaScript objects, functions, and variables automatically become members of the window object.
+advertisement
+
+143. Which is the property of a Window object that holds the name of the frame?
+a) name
+b) title
+c) description
+d) style
+View Answer
+
+Answer: a
+Explanation: The name property of a Window object holds the name of the frame if it has one. This property is writable, and scripts can set it as desired. An iframe creates a nested browsing context represented by a Window object of its own.
+
+144. When will the fourth argument to open() useful?
+a) When the second argument names a retired window
+b) When the first argument names an existing window
+c) When the second argument names an existing window
+d) When the first argument names a retired window
+View Answer
+
+Answer: c
+Explanation: The fourth argument to open() is useful only when the second argument names an existing window. This fourth argument is a boolean value that indicates whether the URL specified as the first argument should replace the current entry in the window’s browsing history (true) or create a new entry in the window’s browsing history (false). Omitting this argument is the same as passing false.
+
+145. The inner frame within a top-level window can be referred to as _____________
+a) parent(parent)
+b) parent.parent
+c) parent*parent
+d) parent/parent
+View Answer
+
+Answer: b
+Explanation: Frames returns the window itself, which is an array-like object, listing the direct sub-frames of the current window. If a frame is contained
+within another frame that is contained within a top-level window, that frame can refer to the top-level window as parent.
+
+146.The central object in a larger API is known as __________
+a) Document Object Material
+b) Document Object Model
+c) Binary Object Model
+d) Data object model
+View Answer
+
+Answer: b
+Explanation: Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document. It is the central object in a larger API, known as the Document Object Model, or DOM, for representing and manipulating document content.
+
+147. The paragraph “p” is a part of __________
+a) h1
+b) body
+c) html
+d) both body and html
+View Answer
+
+Answer: d
+Explanation: The paragraph tag belongs to both html and body tag. It is used to write paragraph on html pages.
+
+148. The node directly above a node is called __________
+a) sibling
+b) child
+c) parent
+d) ancestors
+View Answer
+
+Answer: c
+Explanation: The node directly above a node is the parent of that node. In HTML, the document itself is the parent node of the HTML element, HEAD and BODY are child nodes of the HTML element.
+
+149. The Text and Comment is part of __________
+a) CharacterData
+b) Document
+c) Attr
+d) Element
+View Answer
+
+Answer: a
+Explanation: The CharacterData abstract interface represents a Node object that contains characters. This is an abstract interface, meaning there aren’t any object of type CharacterData. The Text and Comment is part of the CharacterData Element.
+
+150. The nodes that represent HTML elements are the __________
+a) Subclass nodes
+b) HTML nodes
+c) Window nodes
+d) Element nodes
+View Answer
+
+Answer: d
+Explanation: The nodes that represent HTML elements are Element nodes. The various html elements include h1, p, div etc.
+
+151. Which of the following is/are of Text nodes?
+a) Text
+b) Comment
+c) Both Text and Comment
+d) h1
+View Answer
+
+Answer: c
+Explanation: Both Text and Comment are basically strings of text, and these nodes are much like the Text nodes that represent the displaying text of a document.
+
+152. Which is not the way to query a document for an element or elements?
+a) With a specified id attribute
+b) Matching the specified CSS selector
+c) With the specified tag name
+d) without the specified CSS class or classes
+View Answer
+
+Answer: d
+Explanation: The DOM defines a number of ways to select elements; you can query a document for an element or elements:
+with a specified id attribute;
+with a specified name attribute;
+with the specified tag name;
+with the specified CSS class or classes; or
+matching the specified CSS selector
+
+153. Which of the following can be used to select HTML elements based on the value of their name attributes?
+a) getElementByName()
+b) getElementsByName()
+c) getElementsName()
+d) getElementName()
+View Answer
+
+Answer: b
+Explanation: The getElementsByName() method returns a collection of all elements in the document with the specified name (the value of the name attribute), as a NodeList object.
+var radiobuttons = document.getElementsByName("favorite_color");
+
+154. Which of the following property refers to the root element of the document?
+a) documentElement
+b) elementdocument
+c) rootdocument
+d) rootelement
+View Answer
+
+Answer: a
+Explanation: The documentElement property of the Document class refers to the root element of the document. This is always an HTML element. The documentElement property returns the documentElement of the document, as an Element object.
+advertisement
+
+154. The return type of getElementsByClassName() is __________
+a) DOM
+b) Document
+c) Node
+d) NodeList
+View Answer
+
+Answer: d
+Explanation: The getElementsByClassName() method returns a collection of all elements in the document with the specified class name, as a NodeList object. 
+The other methods of returning nodelist objects are getElementsByTagName(), getElementbyId() etc.
+
+155.The type that specifies what kind of event occurred is ____________
+a) event type
+b) even target
+c) both event type and even target
+d) interface
+View Answer
+
+Answer: a
+Explanation: The event type is a string that specifies what kind of event occurred. The type “mousemove”, for example, means that the user moved the mouse.
+
+156. Which is the object on which the event occurred or with which the event is associated?
+a) event type
+b) event target
+c) both event type and even target
+d) interface
+View Answer
+
+Answer: b
+Explanation: The event target is the object on which the event occurred or with which the event is associated. When we speak of an event, we must specify both the type and the target. The target property of the Event interface is a reference to the object that dispatched the event.
+
+157. In general, event handler is nothing but ____________
+a) function
+b) interface
+c) event
+d) handler
+View Answer
+
+Answer: a
+Explanation: An event handler is in general, a function that handles or responds to an event. For example onclick, onkeypress, onload etc are event handler functions.
+
+158. When will the browser invoke the handler?
+a) Program begins
+b) Any event occurs
+c) Specified event occurs
+d) Webpage loads
+View Answer
+
+Answer: c
+Explanation: When an event of the specified type occurs on the specified target, the browser invokes the handler. For example onclick function is executed when mouse is clicked.
+
+159. Which property specifies the property of the event?
+a) Type
+b) Target
+c) Manner
+d) Program
+View Answer
+
+Answer: a
+Explanation: All event objects have a type property that specifies the event type. Event type is a string that specifies what kind of event occurred.
+
+160. The process by which the browser decides which objects to trigger event handlers on is ____________
+a) Event Triggering
+b) Event Listening
+c) Event Handling
+d) Event propagation
+View Answer
+
+Answer: d
+Explanation: Event propagation is the process by which the browser decides which objects to trigger event handlers. Event propagation is a way to describe the “stack” of events that are fired in a web browser.
+
+161. Which form of event propagation handles the registered container elements?
+a) Event Propagation
+b) Event Registration
+c) Event Capturing
+d) Default Actions
+View Answer
+
+Answer: c
+Explanation: Event bubbling and capturing are two ways of event propagation in the HTML DOM API. With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements. With capturing, the event is first captured by the outermost element and propagated to the inner elements.
+advertisement
+
+162. The events that are directly tied to a specific input device are ____________
+a) Device-independent input events
+b) Device-dependent input events
+c) User interface events
+d) State change events
+View Answer
+
+Answer: b
+Explanation: These are events that are directly tied to a specific input device, such as the mouse or keyboard) They include legacy event types such as “mousedown”, “mousemove”, “mouseup”, “keydown”, “keypress”, and “keyup” and also new touch specific events like “touchmove” and “gesturechange”.
+
+163. The high-level events among the following events are ____________
+a) User interface events
+b) Device-independent events
+c) Device-dependent events
+d) Stage event change
+View Answer
+
+Answer: a
+Explanation: UI events are higher-level events, often on HTML form elements that define a user interface for a web application. They include the focus event (when a text input field gains keyboard focus), the change event when the user changes the value displayed by a form element, and the submit event when the user clicks a Submit button in a form.
+
+164. The events that are not directly tied to a specific input device are _____________
+a) User interface events
+b) Device-independent events
+c) Device-dependent events
+d) Stage event change
+View Answer
+
+Answer: b
+Explanation: These are input events that are not directly tied to a specific input device. The click event, for example, indicates that a link or button 
+(or other document element) has been activated) This is often done via a mouse click, but it could also be done by keyboard or (on touch-sensitive devices) 
+by gesture.
+
+165.What is the purpose of array slice method?
+The slice() method returns the selected elements in an array as a new array object. It selects the elements starting at the given start argument, and ends at the given optional end argument without including the last element. If you omit the second argument then it selects till the end. Some of the examples of this method are,
+
+let arrayIntegers = [1, 2, 3, 4, 5];
+let arrayIntegers1 = arrayIntegers.slice(0,2); // returns [1,2]
+let arrayIntegers2 = arrayIntegers.slice(2,3); // returns [3]
+let arrayIntegers3 = arrayIntegers.slice(4); //returns [5]
+
+166.What is the purpose of array splice method?
+The splice() method is used either adds/removes items to/from an array, and then returns the removed item. The first argument specifies the array position for insertion or deletion whereas the option second argument indicates the number of elements to be deleted. Each additional argument is added to the array. Some of the examples of this method are,
+
+let arrayIntegersOriginal1 = [1, 2, 3, 4, 5];
+let arrayIntegersOriginal2 = [1, 2, 3, 4, 5];
+let arrayIntegersOriginal3 = [1, 2, 3, 4, 5];
+
+let arrayIntegers1 = arrayIntegersOriginal1.splice(0,2); // returns [1, 2]; original array: [3, 4, 5]
+let arrayIntegers2 = arrayIntegersOriginal2.splice(3); // returns [4, 5]; original array: [1, 2, 3]
+let arrayIntegers3 = arrayIntegersOriginal3.splice(3, 1, "a", "b", "c"); //returns [4]; 
+
+167.What is the difference between slice and splice?
+
+Slice	                                        Splice
+
+Doesn't modify the original array(immutable).	Modifies the original array(mutable).
+Returns the subset of original array.	        Returns the deleted elements as array.
+Used to pick the elements from array.	        Used to insert or delete elements to/from array.
+
+168.What are lambda or arrow functions?
+An arrow function is a shorter syntax for a function expression and does not have its own this, arguments, super, or new.target. 
+These function are best suited for non-method functions, and they cannot be used as constructors.
+
+169.What is the difference between let and var?
+You can list out the differences in a tabular format
+
+var                                                             let
+	
+It is been available from the beginning of JavaScript.  	Introduced as part of ES6.
+It has function scope.                                          It has block scope.
+Variables will be hoisted.	                                Hoisted but not initialized.
+
+Let's take an example to see the difference,
+
+function userDetails(username) {
+   if(username) {
+     console.log(salary); // undefined(due to hoisting)
+     console.log(age); // error: age is not defined
+     let age = 30;
+     var salary = 10000;
+   }
+   console.log(salary); //10000 (accessible to due function scope)
+   console.log(age); //error: age is not defined(due to block scope)
+}
+
+169.What is the reason to choose the name let as keyword?
+Let is a mathematical statement that was adopted by early programming languages like Scheme and Basic. It has been borrowed from dozens of other languages 
+that use let already as a traditional keyword as close to var as possible.
+
+170.What is IIFE(Immediately Invoked Function Expression)?
+IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined. The signature of it would be as below,
+
+(function ()
+    {
+      // logic here
+    }
+ )
+();
+The primary reason to use an IIFE is to obtain data privacy because any variables declared within the IIFE cannot be accessed by the outside world. i.e, If you try to access variables with IIFE then it throws an error as below,
+
+(function ()
+        {
+          var message = "IIFE";
+          console.log(message);
+        }
+ )
+();
+console.log(message); //Error: message is not defined
+
+171.What is the benefit of using modules?
+There are a lot of benefits to using modules in favour of a sprawling. Some of the benefits are,
+
+Maintainablity
+Reusability
+Namespacing
+
+172.What are closures?
+A closure is the combination of a function and the lexical environment within which that function was declared. i.e, It is an inner function that has access to the outer or enclosing function’s variables. The closure has three scope chains
+
+Own scope where variables defined between its curly brackets
+Outer function’s variables
+Global variables Let's take an example of closure concept,
+function Welcome(name){
+  var greetingInfo = function(message){
+   console.log(message+' '+name);
+  }
+return greetingInfo;
+}
+var myFunction = Welcome('John');
+myFunction('Welcome '); //Output: Welcome John
+myFunction('Hello Mr.'); //output: Hello Mr.John
+As per the above code, the inner function(greetingInfo) has access to the variables in the outer function scope(Welcome) even after outer function has 
+returned.
+
+173.What is scope in javascript?
+Scope is the accessibility of variables, functions, and objects in some particular part of your code during runtime. In other words, scope determines the 
+visibility of variables and other resources in areas of your code.
+
+174.How do you manipulate DOM using service worker?
+Service worker can't access the DOM directly. But it can communicate with the pages it controls by responding to messages sent via the postMessage 
+interface, and those pages can manipulate the DOM.
+
+175.What is web storage?
+Web storage is an API that provides a mechanism by which browsers can store key/value pairs locally within the user's browser, in a much more intuitive fashion than using cookies. The web storage provides two mechanisms for storing data on the client.
+
+Local storage: It stores data for current origin with no expiration date.
+Session storage: It stores data for one session and the data is lost when the browser tab is closed.
+
+176.What are the restrictions of web workers on DOM?
+WebWorkers don't have access to below javascript objects since they are defined in an external files
+
+Window object
+Document object
+Parent object
+
+177.What is a callback function?
+A callback function is a function passed into another function as an argument. This function is invoked inside the outer function to complete an action. Let's take a simple example of how to use callback function
+
+function callbackFunction(name) {
+  console.log('Hello ' + name);
+}
+
+function outerFunction(callback) {
+  let name = prompt('Please enter your name.');
+  callback(name);
+}
+
+outerFunction(callbackFunction);
+
+178.Who created javascript?
+JavaScript was created by Brendan Eich in 1995 during his time at Netscape Communications. Initially it was developed under the name Mocha, but later 
+the language was officially called LiveScript when it first shipped in beta releases of Netscape.
+
+179.What is BOM?
+The Browser Object Model (BOM) allows JavaScript to "talk to" the browser. It consists of the objects navigator, history, screen, location and document 
+which are children of window. The Browser Object Model is not standardized and can change based on different browsers.
+
+180.What is ECMAScript?
+ECMAScript is the scripting language that forms the basis of JavaScript. ECMAScript standardized by the ECMA International standards organization in the 
+ECMA-262 and ECMA-402 specifications. The first edition of ECMAScript was released in 1997.
+
+181.What is JSON?
+JSON (JavaScript Object Notation) is a lightweight format that is used for data interchanging. It is based on a subset of JavaScript language in the way 
+objects are built in JavaScript.
+
+182.How do you get the current url with javascript?
+You can use window.location.href expression to get the current url path and you can use the same expression for updating the URL too. You can also use document.URL for read-only purpose but this solution has issues in FF.
+
+console.log('location.href', window.location.href); // Returns full URL
+
+183.What are the various url properties of location object?
+The below Location object properties can be used to access URL components of the page,
+
+href - The entire URL
+protocol - The protocol of the URL
+host - The hostname and port of the URL
+hostname - The hostname of the URL
+port - The port number in the URL
+pathname - The path name of the URL
+search - The query portion of the URL
+hash - The anchor portion of the URL
+
+184.How do you display the current date in javascript?
+You can use new Date() to generate a new Date object containing the current date and time. For example, let's display the current date in mm/dd/yyyy
+
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = mm + '/' + dd + '/' + yyyy;
+document.write(today);
+
+185.s the !-- notation represents a special operator?
+No,that's not a special operator. But it is a combination of 2 standard operators one after the other,
+
+A logical not (!)
+A prefix decrement (--)
+At first, the value decremented by one and then tested to see if it is equal to zero or not for determining the truthy/falsy value.
+
+186.How do you assign default values to variables?
+You can use the logical or operator || in an assignment expression to provide a default value. The syntax looks like as below,
+
+var a = b || c;
+As per the above expression, variable 'a 'will get the value of 'c' only if 'b' is falsy (if is null, false, undefined, 0, empty string, or NaN), 
+otherwise 'a' will get the value of 'b'.
+
+187.What are modifiers in regular expression?
+Modifiers can be used to perform case-insensitive and global searches. Let's list down some of the modifiers,
+
+Modifier	Description
+i	Perform case-insensitive matching
+g	Perform a global match rather than stops at first match
+m	Perform multiline matching
+
+188.What would be the result of 1+2+'3'?
+The output is going to be 33. Since 1 and 2 are numeric values, the result of first two digits is going to be a numeric value 3. 
+The next digit is a string type value because of that the addition of numeric value 3 and string type value 3 is just going to be a concatenation value 33.
+
+189.What is 'this' keyword in JavaScript?
+
+'This' keyword refers to the object from where it was called.
+
+190.Which symbol is used for comments in Javascript?
+
+// for Single line comments and
+
+/* Multi
+
+Line
+
+Comment
+
+*/
+
+191.JavaScript is ECMAScript
+
+A .False
+B .True
+C .May be
+D .All of the above
+
+192.JavaScript written under which of the following tag?
+
+A .<JavaScript></JavaScript>
+B .<script></script>
+C .<code></code>
+D .<head></head>
+
+193.Variable in JavaScript declared with which of the following keyword?
+
+A .new
+B .int
+C .string
+D .var
+
+194.Which of the followings are primitive data types in JavaScript?
+
+A .String
+B .Number
+C .Boolean
+D .All of the above
+
+195.Which of the following is NOT a JavaScript object?
+
+A .var obj = {};
+B .var obj = { name: "Steve"};
+C .var obj = { name = "Steve"};
+D .var obj = new Object();
+
+196.Which of the following is NOT a correct way of declaring an array in JavaScript?
+
+A .var arr = [1, "two", 3 , 4 ];
+B .var arr = new Array();
+C .var[] arr = new Number()[5];
+D .None of the above
+
+197.What is null in JavaScript?
+
+A .Null means empty string value.
+B .Null means absence of a value.
+C .Null means unknown value.
+D .Null means zero value.
+
+198.Which of the following object represent parameters of current function inside any function?
+
+A .Global
+B .arguments
+C .this
+D .Object
+
+199.A function can be assigned to a variable in JavaScript.
+
+A .True
+B .False
+C .Some time
+D .None of the above
+
+200.Which of the following is an example of anonymous function in JavaScript?
+
+A .var myFunc = function(){ };
+B .function(){ };
+C .var myFunc = (){ };
+D .All of the above.
+
+201.What will 1 == "1" return?
+
+A .True
+B .False
+C .0
+D .1
+
+202.What is eval() in JavaScript?
+
+A .It executes specified string as JavaScript code.
+B .It returns an object representing the parsed tree of the specified JavaScript code.
+C .It executes server side code in JavaScript.
+D .It displays popup message.
+
+203.How to handle error in JavaScript?
+
+A .By writing error proof code.
+B .By using eval().
+C .By using if-else block
+D .By using try, catch & finally block.
+
+204.How to apply strict mode in JavaScript?
+
+A ."strict mode"
+B ."strict"
+C ."use strict"
+D ."apply strict"
+
+205.A variable declared without var keyword inside a function will become _______ variable.
+
+A .local
+B .global
+C .block
+D .undefined
+
+206.Which of the following is not a valid keyword in JavaScript?
+
+A .function
+B .this
+C .module
+D .try
+
+207.What will be the output of the following JavaScript code?
+      x = 1;
+      console.log('x = ' + x);
+      var x;
+
+A .x = 1
+B .error: x is undefined
+C .x = undefined
+D .x = null;
+
+208.What will be the output of the following JavaScript code?
+      for(var x = 1; x < 5; x++)
+      console.log(x);
+
+A .11111
+B .12345
+C .1234
+D .5555
+
+209.What will be the output of the following JavaScript code?
+      var x = 0
+      do{ console.log(x) }while(x > 0)
+
+A .0
+B .null
+C .1
+D .No output
+
+210.Which of the following function of Number object returns a string value version of the current number in a format that may vary according to a browser's
+ locale settings.?
+
+A . toExponential()
+B . toFixed()
+C . toLocaleString()
+D . toString()
+
+211.Which of the following function of String object extracts a section of a string and returns a new string?
+
+A. slice()
+B. split()
+C. replace()
+D. search()
+
+212. Which of the following code creates an object?
+
+A. var book = Object();
+B. var book = new Object();
+C. var book = new OBJECT();
+D. var book = new Book();
+
+213.Which of the following function of Array object creates a new array with the results of calling a provided function on every element in this array?
+
+A. push()
+B. join()
+C. pop()
+D. map()
+
+214.Which of the following function of String object executes the search for a match between a regular expression and a specified string?
+
+A. concat()
+B. match()
+C. replace()
+D. search()
+
+215.Which of the following function of Array object returns a string representing the array and its elements?
+
+A. toSource()
+B. sort()
+C. splice()
+D. toString()
+
+216.Which built-in method returns the length of the string?
+
+A. length()
+B. size()
+C. index()
+D. None of the above.
+
+217. Which of the following type of variable takes precedence over other if names are same?
+
+A. global variable
+B. local variable
+C. Both of the above.
+D. None of the above.
+
+218.Which of the following function of String object returns the calling string value converted to lower case?
+
+A. toLocaleLowerCase()
+B. toLowerCase()
+C. toString()
+D. substring()
+
+219.Which of the following function of String object returns the character at the specified index?
+
+A. charAt()
+B. charCodeAt()
+C. concat()
+D. indexOf()
+
+220.Which of the following function of String object causes a string to be displayed in a small font, as if it were in a <small> tag?
+
+A. link()
+B. small()
+C. sup()
+D. sub()
+
+221.Which built-in method reverses the order of the elements of an array?
+
+A. changeOrder(order)
+B. reverse()
+C. sort(order)
+D. None of the above.
+
+222.Which of the following function of String object is used to find a match between a regular expression and a string, and to replace the matched substring
+with a new substring?
+
+A. concat()
+B. match()
+C. replace()
+
+223.Which of the following function of String object returns a number indicating the Unicode value of the character at the given index?
+
+A. charAt()
+B. charCodeAt()
+C. concat()
+D. indexOf()
+
+224.Which of the following function of Array object joins all elements of an array into a string?
+
+A. concat()
+B. join()
+C. pop()
+D. map()
+
+225. Which of the following function of Array object creates a new array with all of the elements of this array for which the provided filtering function returns true?
+
+A. concat()
+B. every()
+C. filter()
+
+226.Which built-in method combines the text of two strings and returns a new string?
+
+A. append()
+B. concat()
+C. attach()
+D. None of the above.
+
+227.Which built-in method returns the calling string value converted to lower case?
+
+A. toLowerCase()
+B. toLower()
+C. changeCase(case)
+D. None of the above.
+
+228. Which built-in method calls a function for each element in the array?
+
+A. while()
+B. loop()
+C. forEach()
+D. None of the above.
+
+229.Which built-in method returns the character at the specified index?
+
+A. characterAt()
+B. getCharAt()
+C. charAt()
+D. None of the above.
+
+230.Which of the following is a server-side Java Script object?
+ A. Function
+ B. File
+ C. FileUpload
+ D. Date
+
+231.Java script can be used for Storing the form's contents to a database file on the server
+ A. False
+ B. True
+
+232. To insert a JavaScript into an HTML page, which tag is used?
+ A. < script=’java’>
+ B. < javascript>
+ C. < script>
+ D. < js>
+
+232. Which of the below is used in Java script to insert special characters?
+ A. &
+ B. \
+ C. -
+ D. %
+
+233.How does Java Script store dates in objects of Date type?
+ A. The number of days since January 1st, 1900
+ B. The number of seconds since January 1st, 1970
+ C. The number of milliseconds since January 1st, 1970
+ D. The number of picoseconds since January 1st, 1970
+
+234.C-style block-level scoping is not supported in Java script
+ A. False
+ B. True
+
+235.JavaScript ignores extra spaces
+ A. True
+ B. False
+
+236.Which is the correct way to write a JavaScript array?
+ A. var txt = new Array(1:"arr",2:"kim",3:"jim")
+ B. var txt = new Array:1=(" arr ")2=("kim")3=("jim")
+ C. var txt = new Array("arr ","kim","jim")
+ D. var txt = new Array=" arr ","kim","jim"
+
+237.Which of the following is correct to write “Hello World” on the web page?
+ A. System.out.println(“Hello World”)
+ B. print(“Hello World”)
+ C. document.write(“Hello World”)
+ D. response.write(“Hello World”)
+
+238.Which of the following is the tainted property of a window object in Java Script?
+ A. Pathname
+ B. Protocol
+ C. Defaultstatus
+ D. Host
+
+239.Which attribute needs to be changed to make elements invisible?
+ A. visibilty
+ B. visible
+ C. invisibility
+ D. invisible
+
+240.Which of the following is used to capture all click events in a window?
+ A. window.captureEvents(Event.CLICK);
+ B. window.routeEvents(Event.CLICK );
+ C. window.handleEvents (Event.CLICK);
+ D. window.raiseEvents(Event.CLICK );
+
+241.Javascript is an object oriented language?
+ A. False
+ B. True
+
+242.Which of the following is not a valid JavaScript variable name?
+ A. java
+ B. _java_and_ java _names
+ C. javaandjava
+ D. None of the above
+
+243.Which of the ways below is incorrect of instantiating a date?
+ A. new Date(dateString)
+ B. new Date()
+ C. new Date(seconds)
+ D. new Date(year, month, day, hours, minutes, seconds, milliseconds)
+
+244.What is negative infinity in Java script?
+ A. Any of below
+ B. number in JavaScript, derived by dividing number by a negative number.
+ C. number in JavaScript, derived by dividing number by zero.
+ D. number in JavaScript, derived by dividing negative number by zero
+
+245.___________ JavaScript is also called client-side JavaScript.
+ A. Microsoft
+ B. Navigator
+ C. LiveWire
+ D. Native
+
+246. What language defines the behavior of a web page?
+ A. HTML
+ B. CSS
+ C. XML
+ D. Java Script
+
+247. Why so Java and JavaScript have similar name?
+ A. Java Script is a stripped-down version of Java
+ B. The syntax of JavaScript is loosely based on Java syntax
+ C. They both support Object Oriented Programming
+ D. None of the above
+
+248. File is a server-side JavaScript object?
+ A. True
+ B. False
+
+249.What is the alternate name for Java script?
+ A. LimeScript 
+ B. Both a and d
+ C. ECMScript 
+ D. ECMAScript
+
+250.Which of the following is a client-side Java Script object?
+ A. File 
+ B. Function
+ C. FileUpload
+ D. Time
+
+251.What java wrapper type is created when a JavaScript object is sent to Java?
+ A. ScriptObject 
+ B. JavaObject
+ C. Jobject
+ D. JSObject
+
+252.Is it possible to declare a variable in Java Script along its type?
+ A. Yes
+ B. No
+
+253.JavaScript ignores extra spaces
+ A. True
+ B. False
+
+254. Which of the following method is used to evaluate a string of Java Script code in the context of the specified object?
+ A. Eval
+ B. ParseDoule
+ C. ParseObject
+ D. Efloat
+
+255.Java Script supports all boolean operators
+ A. True
+ B. False
+
+256.Java Script entities start with ____________ and end with ______________
+ A. Semicolon, colon
+ B. Semicolon, Ampersand
+ C. Ampersand, colon
+ D. Ampersand, semicolon
+
+257. How to append a value to an array of Java Script?
+ A. arr[arr.length] = value
+ B. arr[arr.length+1] = new Arrays()
+ C. arr[arr.length-1] = value
+ D. arr[arr.length*1] = value
+
+258.What are JavaScript Data Types?
+
+Following are the JavaScript Data types:
+
+Number
+String
+Boolean
+Object
+Undefined
+
+259.What is the use of isNaN function?
+
+isNan function returns true if the argument is not a number otherwise it is false.
+
+260.What is negative infinity?
+
+Negative Infinity is a number in JavaScript which can be derived by dividing negative number by zero.
+
+261.Is it possible to break JavaScript Code into several lines?
+
+Breaking within a string statement can be done by the use of a backslash, '\', at the end of the first line
+
+Example:
+
+document.write("This is \a program");
+And if you change to a new line when not within a string statement, then javaScript ignores break in line.
+
+Example:
+
+var x=1, y=2,
+z=
+x+y;
+The above code is perfectly fine, though not advisable as it hampers debugging.
+
+262.What are undeclared and undefined variables?
+
+Undeclared variables are those that do not exist in a program and are not declared. If the program tries to read the value of an undeclared variable, then a runtime error is encountered.
+
+Undefined variables are those that are declared in the program but have not been given any value. If the program tries to read the value of an undefined 
+variable, an undefined value is returned.
+
+263.What is a prompt box?
+
+A prompt box is a box which allows the user to enter input by providing a text box. Label and box will be provided to enter the text or number.
+
+264.What is === operator?
+
+=== is called as strict equality operator which returns true when the two operands are having the same value without any type conversion.
+
+265.Does JavaScript support automatic type conversion?
+
+Yes JavaScript does support automatic type conversion, it is the common way of type conversion used by JavaScript developers
+
+266. How can the style/class of an element be changed?
+
+It can be done in the following way:
+
+document.getElementById("myText").style.fontSize = "20?;
+or
+
+document.getElementById("myText").className = "anyclass";
+
+267.Explain how to read and write a file using JavaScript?
+
+There are two ways to read and write a file using JavaScript
+
+Using JavaScript extensions
+Using a web page and Active X objects
+
+268.What are all the looping structures in JavaScript?
+
+Following are looping structures in Javascript:
+
+For
+While
+do-while loops
+
+269. What is called Variable typing in Javascript?
+
+Variable typing is used to assign a number to a variable and the same variable can be assigned to a string.
+
+Example
+
+i = 10;
+i = "string";
+This is called variable typing.
+
+270.How can you convert the string of any base to integer in JavaScript?
+
+The parseInt() function is used to convert numbers between different bases. parseInt() takes the string to be converted as its first parameter, and the second parameter is the base of the given string.
+
+In order to convert 4F (of base 16) to integer, the code used will be -
+
+parseInt ("4F", 16);
+
+271.What would be the result of 3+2+"7"?
+
+Since 3 and 2 are integers, they will be added numerically. And since 7 is a string, its concatenation will be done. So the result would be 57.
+
+272.What do mean by NULL in Javascript?
+
+The NULL value is used to represent no value or no object. It implies no object or null string, no valid boolean value, no number and no array object.
+
+273.What is the function of delete operator?
+
+The delete keyword is used to delete the property as well as its value.
+
+Example
+
+var student= {age:20, batch:"ABC"};
+delete student.age;
+
+274. What is an undefined value in JavaScript?
+
+Undefined value means the
+
+Variable used in the code doesn't exist
+Variable is not assigned to any value
+Property doesn't exist
+
+275. What are all the types of Pop up boxes available in JavaScript?
+
+Alert
+Confirm and
+Prompt
+
+276. What is the use of Void(0)?
+
+Void(0) is used to prevent the page from refreshing and parameter "zero" is passed while calling.
+
+Void(0) is used to call another method without refreshing the page.
+
+277. How can a page be forced to load another page in JavaScript?
+
+The following code has to be inserted to achieve the desired effect:
+
+<script language="JavaScript" type="text/javascript" >
+
+<!-- location.href="http://newhost/newpath/newfile.html"; //--></script>
+
+278.What is the data type of variables of in JavaScript?
+
+All variables in the JavaScript are object data types.
+
+279. What are escape characters?
+
+Escape characters (Backslash) is used when working with special characters like single quotes, double quotes, apostrophes and ampersands. Place backslash before the characters to make it display.
+
+Example:
+
+document.write "I m a "good" boy"
+document.write "I m a \"good\" boy"
+
+280.Explain what is pop()method in JavaScript?
+
+The pop() method is similar as the shift() method but the difference is that the Shift method works at the start of the array. Also the pop() method take the last element off of the given array and returns it. The array on which is called is then altered.
+
+Example:
+
+var cloths = ["Shirt", "Pant", "TShirt"];
+cloths.pop();
+//Now cloth becomes Shirt,Pant
+
+281.Mention what is the disadvantage of using innerHTML in JavaScript?
+
+If you use innerHTML in JavaScript the disadvantage is
+
+Content is replaced everywhere
+We cannot use like "appending to innerHTML"
+Even if you use +=like "innerHTML = innerHTML + 'html'" still the old content is replaced by html
+The entire innerHTML content is re-parsed and build into elements, therefore its much slower
+The innerHTML does not provide validation and therefore we can potentially insert valid and broken HTML in the document and break it
+
+282. What is break and continue statements?
+
+Break statement exits from the current loop.
+
+Continue statement continues with next statement of the loop.
+
+283. What are the two basic groups of dataypes in JavaScript?
+
+They are as –
+
+Primitive
+Reference types.
+Primitive types are number and Boolean data types. Reference types are more complex types like strings and dates.
+
+284. How generic objects can be created?
+
+Generic objects can be created as:
+
+var I = new object();
+
+285.What is the use of type of operator?
+
+'Typeof' is an operator which is used to return a string description of the type of a variable.
+
+286.Which keyword is used to print the text in the screen?
+
+document.write("Welcome") is used to print the text – Welcome in the screen.
+
+287.What is the use of blur function?
+
+Blur function is used to remove the focus from the specified object.
+
+288.What is variable typing?
+
+Variable typing is used to assign a number to a variable and then assign string to the same variable. Example is as follows:
+
+i= 8;
+i="john";
+
+289.What are the different types of errors in JavaScript?
+
+There are three types of errors:
+
+Load time errors: Errors which come up when loading a web page like improper syntax errors are known as Load time errors and it generates the errors dynamically.
+Run time errors: Errors that come due to misuse of the command inside the HTML language.
+Logical Errors: These are the errors that occur due to the bad logic performed on a function which is having different operation.
+
+290.How will you explain closures in JavaScript? When are they used?
+
+Closure is a locally declared variable related to a function which stays in memory when the function has returned.
+
+For example:
+
+function greet(message) {
+
+    console.log(message);
+
+}
+
+function greeter(name, age) {
+
+    return name + " says howdy!! He is " + age + " years old";
+
+}
+
+// Generate the message
+
+var message = greeter("James", 23);
+
+// Pass it explicitly to greet
+
+greet(message);
+
+This function can be better represented by using closures
+
+function greeter(name, age) {
+
+    var message = name + " says howdy!! He is " + age + " years old";
+
+    return function greet() {
+
+        console.log(message);
+
+    };
+
+}
+
+// Generate the closure
+
+var JamesGreeter = greeter("James", 23);
+
+// Use the closure
+
+JamesGreeter();
+
+291.Explain the for-in loop?
+
+The for-in loop is used to loop through the properties of an object.
+
+The syntax for the for-in loop is -
+
+for (variable name in object){
+	statement or block to execute
+}
+In each repetition, one property from the object is associated to the variable name, 
+and the loop is continued till all the properties of the object are depleted.
+
+292.Describe the properties of an anonymous function in JavaScript?
+
+A function that is declared without any named identifier is known as an anonymous function. In general, an anonymous function is inaccessible after its declaration.
+
+Anonymous function declaration -
+
+var anon = function() {
+	alert('I am anonymous');
+};
+anon();
+
+293. Is JavaScript case sensitive? Give an example?
+
+Yes, JavaScript is case sensitive. For example, a function parseInt is not same as the function Parseint.
+
+294.What boolean operators can be used in JavaScript?
+
+The 'And' Operator (&&), 'Or' Operator (||) and the 'Not' Operator (!) can be used in JavaScript.
+
+*Operators are without the parenthesis.
+
+295.How can a particular frame be targeted, from a hyperlink, in JavaScript?
+
+This can be done by including the name of the required frame in the hyperlink using the 'target' attribute.
+
+<a href="/newpage.htm" target="newframe">>New Page</a>
+
+296.What is the role of break and continue statements?
+
+Break statement is used to come out of the current loop while the continue statement continues the current loop with a new recurrence.
+
+297.How are DOM utilized in JavaScript?
+
+DOM stands for Document Object Model and is responsible for how various objects in a document interact with each other. DOM is required for developing web pages, which includes objects like paragraph, links, etc. These objects can be operated to include actions like add or delete. DOM is also required to add extra 
+capabilities to a web page. On top of that, the use of API gives an advantage over other existing models.
+
+298.Explain the unshift() method ?
+
+This method is functional at the starting of the array, unlike the push(). It adds the desired number of elements to the top of an array. For example -
+
+var name = [ "john" ];
+name.unshift( "charlie" );
+name.unshift( "joseph", "Jane" );
+console.log(name);
+The output is shown below:
+
+[" joseph "," Jane ", " charlie ", " john "]
+
+299. Why it is not advised to use innerHTML in JavaScript?
+
+innerHTML content is refreshed every time and thus is slower. There is no scope for validation in innerHTML and, 
+therefore, it is easier to insert rouge code in the document and, thus, make the web page unstable.
+
+300.How are JavaScript and ECMA Script related?
+
+ECMA Script are like rules and guideline while Javascript is a scripting language used for web development.
+
+301. What are the features of JavaScript?
+Features - JavaScript Interview Questions
+
+Following are the features of JavaScript:
+
+It is a lightweight, interpreted programming language.
+It is designed for creating network-centric applications.
+It is complementary to and integrated with Java.
+It is an open and cross-platform scripting language.
+
+302.Can you assign an anonymous function to a variable and pass it as an argument to another function?
+Yes! An anonymous function can be assigned to a variable. It can also be passed as an argument to another function.
+
+303.What are the scopes of a variable in JavaScript?
+The scope of a variable is the region of your program in which it is defined. JavaScript variable will have only two scopes.
+• Global Variables − A global variable has global scope which means it is visible everywhere in your JavaScript code.
+• Local Variables − A local variable will be visible only within a function where it is defined. Function parameters are always local to that function.
+
+304. List out the different ways an HTML element can be accessed in a JavaScript code.
+Here are the list of ways an HTML element can be accessed in a Javascript code:
+(i) getElementById(‘idname’): Gets an element by its ID name
+(ii) getElementsByClass(‘classname’): Gets all the elements that have the given classname.
+(iii) getElementsByTagName(‘tagname’): Gets all the elements that have the given tag name.
+(iv) querySelector(): This function takes css style selector and returns the first selected element.
+
+305.What are the ways to define a variable in JavaScript?
+The three possible ways of defining a variable in JavaScript are:
+
+Var – The JavaScript variables statement is used to declare a variable and, optionally, we can initialize the value of that variable. Example: var a =10; Variable declarations are processed before the execution of the code.
+Const – The idea of const functions is not allow them to modify the object on which they are called. When a function is declared as const, it can be called on any type of object.
+Let – It is a signal that the variable may be reassigned, such as a counter in a loop, or a value swap in an algorithm. It also signals that the variable will be used only in the block it’s defined in.
+
+306.What is a Typed language?
+Typed Language is in which the values are associated with values and not with variables. It is of two types:
+
+Dynamically: in this, the variable can hold multiple types; like in JS a variable can take number, chars.
+Statically: in this, the variable can hold only one type, like in Java a variable declared of string can take only set of characters and nothing else.
+
+307. What is the difference between null & undefined?
+Undefined means a variable has been declared but has not yet been assigned a value. On the other hand, null is an assignment value. It can be assigned to a variable as a representation of no value. Also, undefined and null are two distinct types: undefined is a type itself (undefined) while null is an object.
+
+308.What is the difference between undeclared & undefined?
+Undeclared variables are those that do not exist in a program and are not declared. If the program tries to read the value of an undeclared variable, then a runtime error is encountered. Undefined variables are those that are declared in the program but have not been given any value. If the program tries to read the value of an undefined variable, an undefined value is returned.
+
+309.Name some of the JavaScript Frameworks
+JavaScript Frameworks - JavaScript interview questionsA JavaScript framework is an application framework written in JavaScript. It differs from a JavaScript library in its control flow. There are many JavaScript Frameworks available but some of the most commonly used frameworks are:
+
+Angular
+React
+Vue
+
+310. In the following Code snippet can you please predict the output or If you get an error, please explain the error?
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2> <strong> Sample: Software Testing Help</strong> </h2>
+<p id="studentName"></p>
+
+<script>
+var studentName = "Sajeesh Sreeni"; // String 'Sajeesh Sreeni' stored in studentName
+var studentName; // varaible is decalred again
+document.getElementById("studentName").innerHTML = 
+"Redeclaring the varaible will not lose the value!.<br>"
++"Here the value in studentName is "+ studentName;
+
+</script>
+
+</body>
+</html>
+Answer: This code will not produce any errors.
+
+Redeclaration of the variables is allowed in JavaScript. Hence, the value of the variable will not be lost after the execution of the statement here.
+
+311.In the following Code snippet can you please predict the output or If you get an error; please explain the error?
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2> <strong> Sample: Software Testing Help</strong> </h2>
+<p id="sum_first"></p>
+<p id="sum_second"></p>
+<script>
+var sum_first =50+20+' Sajeesh Sreeni ';
+var sum_second= " Sajeesh Sreeni "+50+20;
+document.getElementById("sum_first").innerHTML = "The first varaible sum is :"+sum_first +
+"<br>The second varaible sum is :"+sum_second ;
+</script>
+</body>
+</html>
+Answer: This code will not show any error!
+
+The output of the code snippet here is:
+
+             The first variable sum is: 70 Sajeesh Sreeni
+           The second variable sum is: Sajeesh Sreeni 5020
+
+312.What are the Advantages of JavaScript?
+
+Answer: JavaScript Scripting language has many advantages as stated below.
+
+Lightweight: JavaScript is easy to implement. It has small memory footprints.
+Interpreted: It is an interpreted language. Instructions are executed directly.
+Object-oriented: JavaScript is an object-oriented language.
+First class functions: In JavaScript, a function can be used as a value.
+Scripting Language: It’s a language in which instructions are written for a run-time environment.
+
+313.In the following Code snippet can you please predict the output or If you get an error; please explain the error?
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2> <strong> Sample: Software Testing Help</strong> </h2>
+<p style='text-decoration:underline'>Example Const Variable </p>
+<p id="display"></p>
+<script>
+const first_num;
+first_num =1000;
+document.getElementById("display").innerHTML = "First Number:"+ first_num;
+</script>
+</body>
+</html>
+Answer: The ‘const’ variable ’first_num’ is not initialized with a value, so the code will produce a Syntax Error.
+
+The output of the code snippet here is:
+
+Error: Uncaught SyntaxError: Missing initializer in the const declaration
+
+314. What is the use of ‘debugger’ keyword in JavaScript code?
+
+Answer: Using the ‘debugger’ keyword in the code is like using breakpoints in the debugger.
+
+To test the code, the debugger must be enabled for the browser. If debugging is disabled for the browser, the code will not work. During debugging the code below should stop executing, before it goes to the next line.
+
+315.What is JavaScript ‘Strict Mode’?
+
+Answer: ‘Strict mode’ is a restricted variant of JavaScript.
+
+Usually, JavaScript is ‘not very strict’ in throwing errors.
+
+But in ‘Strict mode’ it will throw all types of errors, even the silent errors. Thus, the process of debugging becomes easier. And the chances for making mistake for the developer is reduced.
+
+316. What are the characteristics of JavaScript ‘Strict Mode’?
+
+Answer: Given below are the characteristics of JavaScript ‘Strict Mode’:
+
+‘Strict Mode’ will stop developers from creating global variables.
+Developers are restricted from using duplicate parameters.
+Strict mode will restrict you from using JavaScript keyword as a variable name or function name.
+Strict mode is declared with ‘use strict’ keyword at the beginning of the script.
+All browser support strict mode.
+
+317.What is the syntax of ‘Self Invoking Function’? Give an example?
+
+Answer:
+
+The syntax for the Self-Invoking function:
+
+(function () {
+return () } () ;
+Here the last ‘()’ parenthesis in the syntax states that it is a function expression.
+
+318. In the following Code snippet, can you please predict the output or If you get an error; please explain the error?
+
+Answer: 
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2> <strong> Sample : Software Testing Help</strong> </h2>
+<p style='text-decoration:underline'>Example for JavaScript Hoisting </p>
+<p id="dispaly_num"></p>
+<script>
+first_num = 100; // Assign value 100 to num
+elem = document.getElementById("dispaly_num");
+elem.innerHTML = " Here the variable first_num:<u> "+first_num +"</u> is taken to the top <br>" +
+"Since second variable is initialised the value is not taken to the top and it's value is "
++ "<u>"+second_num +"</u> “;
+var first_num; // declaration only
+var second_num =200; // Initialised the variable
+</script>
+</body>
+</html>
+The output of the code snippet here is:
+
+                Here the variable first_num: 100 is taken to the top
+               Since the second variable is initialized the value is not taken to the top and its value is undefined
+
+319.In the following Code snippet can you please predict the output or If you get an error, please explain the error?
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2> <strong> Sample: Software Testing Help</strong> </h2>
+<p style='text-decoration:underline'>Find the output </p>
+<p id="display"></p>
+<script>
+var first_num =500;
+var result= function(){
+document.getElementById("display").innerHTML = first_num;
+var first_num =1000;
+}
+result();
+</script>
+</body>
+</html>
+Answer: Here in the code given above, the value of the ‘first_num’ variable will not be 1000.
+
+In JavaScript, there is no hoisting for variable initialization. The function ‘result ()’ will choose the local variable ‘first_num’, as it is declared inside the function. Since the variable is declared after it is used, the value of ‘first_num’ is undefined.
+The output of the code snippet here is:
+
+Undefined
+
+320.In the following Code snippet can you please predict the output or If you get an error; please explain the error?
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2> <strong> Sample: Software Testing Help</strong> </h2>
+<p style='text-decoration:underline'>Example of 'Const' Keyword </p> 
+<p id="display_first"></p>
+<p id="display_second"></p>
+<script>
+let first_num =500; 
+first_num=501; 
+document.getElementById("display_first").innerHTML = "First Number:"+ first_num ; 
+const second_num =1000; 
+second_num=1001; 
+document.getElementById("display_second").innerHTML = "Second Number :"+second_num;
+</script>
+</body>
+</html>
+Answer: Please refer Ques No: 21 before reading further
+
+The output of the code snippet is:
+
+            First Number:501
+
+We will also get an Error while running the code, as we are trying to change the value of a ‘const’ variable.
+
+Error: Uncaught TypeError: Assignment to constant variable.
+
+321.What are ‘settimeout()’?
+
+Answer: (It better to explain this answer with an example)
+
+Consider the code snippet
+
+Console.log (‘First Line’);
+Console.log (‘Second Line’);
+Console.log (‘Third Line’);
+The output of the code snippet here is:
+
+First Line
+Second Line
+Third Line
+
+Now you introduce settimeout() method and wrap the same set of code in it.
+Settimeout(function() {
+Console.log (‘First Line’);
+},0);
+Console.log (‘Second Line’);
+Console.log (‘Third Line’);
+The output of the code snippet here is:
+
+Second Line
+Third Line
+First Line
+
+With the introduction of settimeout(), the processes become asynchronous. The first statements to be placed in the stack is Console.log (‘Second Line’), and Console.log (‘Third Line’), and they will get executed first. You need to wait until everything in the stack is completed first.
+
+Even though ‘0’ is the timeout period, it doesn’t mean that it will be executed right away.
+
+322.In the following Code snippet can you please predict the output or If you get an error; please explain the error?
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2> <strong> Sample: Software Testing Help</strong> </h2>
+<p style='text-decoration:underline'>Example Assignmnet Statement</p>
+<p id="display"></p>
+<script>
+var x =500;
+let y,z,p,q;
+q=200;
+if(true){
+x=y=z=p=q;
+document.getElementById("display").innerHTML = "x="+ x + "<br>y :"+ y +"<br>z :"+ z+"<br>p :"+ p+"<br>q :"+ q;
+
+}
+</script>
+</body>
+</html>
+Answer: The assignment statements are considered from Right to left.
+
+The output of the code snippet here is:
+
+x=200
+y:200
+z:200
+p:200
+q:200
+
+323.Can you give an example where the code snippet shows the difference between test () and exec () methods?
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2> <strong> Sample : Software Testing Help</strong> </h2>
+<p style='text-decoration:underline'>Example for exec() methods </p>
+<p>Click the button to search for a pattern "How“ in the given string "Hello. Good Morning. How do you feel today?"</p>
+<p>If the "How" is found, the method will return the pattern </p>
+<button onclick="searchTxt()">Search</button>
+<p id="result"></p>
+<script>
+function searchTxt() {
+var str = "Hello. Good Morning. How do you feel today?";
+var search_patt = new RegExp("How");
+var res = search_patt.exec(str);
+document.getElementById("result").innerHTML ="Found the pattern :"+ res;
+}
+</script>
+</body>
+</html>
+Answer: This is an example of the test () and exec () method, Refer Ques No: 5 for more details.
+
+The output of the code snippet here is:
+
+Found the pattern using exec (): How
+Using test () the result is: true
+
+324.Can you give an example showing the use of ‘debugger’ keyword in the JavaScript code?
+
+Answer:
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h2> <strong> Sample: Software Testing Help</strong> </h2>
+<p style='text-decoration:underline'> Example for debug keyword </p>
+<p> Here to test the code, debugger must be enabled for the browser, <br>during debugging the code below should stop executing before it goes to the next line. </p>
+<p id="wait_result"></p>
+<p id="show_result"></p>
+<script>
+var a = 1000;
+var b = 500;
+var sum = a + b;
+document.getElementById("wait_result").innerHTML = "Adding numbers......<br>Select 'Resume Script execution' to continue: ";
+debugger;
+document.getElementById("show_result").innerHTML = "Sum of the numbers : "+sum;
+</script>
+</body>
+</html>
+Note: The debugger must be enabled for the browser to test the code. Refer Ques No: 5 for more details
+
+This is an example of debugging keyword (Browser used: Chrome)
+The output of the code snippet here is:
+
+Here to test the code, the debugger must be enabled for the browser,
+during debugging the code below should stop executing before it goes to the next line.
+Adding numbers…
+Select ‘Resume Script execution' to continue:
+
+<Click on ‘Resume Script execution’ Button>
+
+Sum of the numbers: 1500
+
+325.In the following Code snippet can you please predict the output or If you get an error; please explain the error?
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2> <strong> Sample: Software Testing Help</strong> </h2>
+<p style='text-decoration:underline'>Example Type Converting </p>
+<p id="display"></p>
+<script>
+var first_num =500;
+var first_name='500';
+if(first_num == first_name){ 
+document.getElementById("display").innerHTML = "Comparison will return 'true' by Type converting Operator ";
+}
+</script>
+</body>
+</html>
+Answer: Consider the code
+
+If (‘100’==100) {
+document. write (“It’s a Type Converting Operator”);
+}
+Here
+  typeof(‘100’) is string
+   typeof(100) is number
+the ‘==’ operator will convert the number type, which is on the right side of the operator to string and compare both values
+The output of the code snippet here is:
+
+Comparison will return ‘true' by Type converting Operator
+
