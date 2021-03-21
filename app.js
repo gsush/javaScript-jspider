@@ -1,134 +1,126 @@
-//17TH MARCH 2021
-// BOM (BROWSER OBJECT MODEL)(ONLY FOR FRONTEND)
-// BUILT IN OBJECTS ARE DOCUMENT , NAVIGATOR ,SCREEN ,HISTORY ,LCOCATION.
-// console.log(window.document);
-// console.log(window.navigator);
-// console.log(window.screen);
-// console.log(window.history);
-// console.log(window.location);
+//19 march 2021
+// DOM document object model is an interface for html and xml to add additional feature. 
+// the program can change the document structure,style and content.
 
-// // now how to get latitude and longitude. 
-// console.log(window.navigator.platform); // detect which platform it is win32 or win 64 or linux flavour.
-// console.log(window.navigator.geolocation.getCurrentPosition); // current position.
 
-// we have to define the function for accessing the location.
-// in the images a screen shot is there 
-// function getCurrentLocation() {
-//     if (window.navigator.geolocation) {
-//         window.navigator.geolocation.getCurrentPosition(function (position) {
-//             console.log(position);
-//             document.write(`
-//             My current latitude<h1> ${position.coords.latitude}</h1>
-//              and my current longitude <h1> ${position.coords.longitude}</h1>`);
-//         });
-//     } else {
-//         console.log("location is not supported by browser");
-//     }
+// console.log(document); // 
+// console.log(window.document.all); // html collection is an array like object 
+
+// let allElements = document.all;
+// console.log(allElements[5]); // array like object and not a array
+
+// console.log(Array.isArray(allElements)); // false
+// // allElements.forEach(x => console.log(x)); //Uncaught TypeError: allElements.forEach is not a function
+
+// // using spread operator to convert into array and apply for each method
+
+// [...allElements].forEach(x => console.log(x));
+
+// how to get all the properties.
+// console.dir(document);
+// console.log(document.links);
+
+// for (let a of document.links) { // html href*10
+//     console.log(a);
+//     a.style.background = "green";
+//     a.style.background = "white";
+//     a.style.display = "black";
+//     a.style.padding = "10px";
+//     a.style.margin = "10px";
 // }
 
 
-// getCurrentLocation();
+// let demo = document.getElementById("demo"); // id is unique for everyone
+// console.log(demo); // div id demo
+// let template = document.getElementById("template");
+// console.log(template); //html div id template
 
-// // how to use online and offline thing in browser like fb status
-
-// console.log(window.navigator.onLine);
-
-// if (window.navigator.onLine == true) {
-//     document.write(`hey i am here <h1 style= "color:green" >online</h1>`)
-// } else {
-//     document.write(`hello world <h1 style = "color:red">offline</h1> please try later`);
+// //document.getElementsByClassName;// can access multiple elements and returns html collections
+// let block = document.getElementsByClassName("block");
+// // console.log(block); //  html div.block*10
+// for (let i of block) {
+//     console.log(i);
 // }
 
-// how to get the video of the user
+// getElementbyTagName
 
-// window.navigator.getUserMedia = window.navigator.getUserMedia || window.navigator.webKitGetUserMedia;
+// let block = document.getElementsByTagName("div");
+// console.log(block); // collection of all the html elements and index can also be used
 
-// if (window.navigator.getUserMedia) {
-//     window.navigator.getUserMedia(
-//         { audio: true, video: { height: 768, width: 1466 } },
-//         (stream) => {
-//             let video = document.querySelector("video");
-//             video.srcObject = stream;
-//             video.onloadedmetadata = function () {
-//                 video.play();
-//             };
-//         }, // success callback
-//         (err) => {
-//             console.log(err.name); // error callback
-//         }
-//     );
-// } else {
-//     console.log("not supported");
+// let demo = document.querySelector("#demo"); // return only the selected element single one.
+// console.log(demo);
+
+// let allElements = document.querySelectorAll("div");// all means node list act as a array but not array itself.
+// console.log(allElements);
+// allElements.forEach(x => console.log(x)); // nodelist support foreach method key value
+
+// // using tagname we can't use foreach method first convert in into array spread and use foreach
+// let allElementswithHtml = document.getElementsByTagName("div");
+// //allElementswithHtml.forEach(x => console.log(x)); // allElementswithHtml.forEach is not a function
+// [...allElementswithHtml].forEach(x => console.log(x));
+
+// // html div id demo ,div class block , div hello
+// let hello = document.querySelector("#demo .block div");
+// console.log(hello);
+
+// let str = "cde";
+// var place = 2;
+// var strarr = str.split("");
+
+// //console.log(strarr);
+
+// for (let i = 0; i < strarr.length; i++) {
+//     //console.log(strarr[i]);
+//     let newstr = strarr[i].charCodeAt(0) - place;
+//     //console.log(newstr);
+//     let finalstr = String.fromCharCode(newstr);
+//     //console.log(finalstr.join());
+
 // }
 
 
-// // the useragent property returns the value of the user-agent header sent by the browser to the server.
-// console.log(window.navigator.userAgent); // read only property
+// // inserting text html div id demo
+// let demo = document.getElementById("demo");
+// demo.textContent = "we are learning dom ...";
+// // inserting using dom
+
+// //demo.innerHTML = "<h1> we are learning javascript using dom...</h1>";
+// //demo.innerText = "<h1> hello there </h1>";
+
+// // connecting css using javascript
+// demo.style.background = "crimson";
+// demo.style.color = "white";
+// demo.style.textTransform = "upperCase";
+// demo.style.transform = "scale(1)";
 
 
-// // return a string representing the platform of the browser. it will always return something 
-// console.log(window.navigator.appVersion);
-
-// console.log(window.navigator.appCodeName);// it comes as mozilla as it was a part of netscape and still it is used.
-// // irrespective of the platform.
-
-// console.log(window.navigator.product);// gecko a compatibility purpose
-
-// console.log(window.navigator.vendor); // google
-// console.log(window.navigator.language); // gb-En
-// console.log(window.navigator.cookieEnabled); // true
-// console.log(window.navigator.javaEnabled()); // false 
+// how to add attributes in html
+let demo = document.getElementById("demo");
+// demo.setAttribute("class", "jspider");
+// demo.setAttribute("title", "we are adding attributes");
+// demo.setAttribute("disabled", true);
+// demo.innerHTML = "<h1>hello there </h1>";
+// console.log(demo);
 
 
-//****************18/3/2021**********************
-
-//screen object and its properties
-
-// console.log(window.screen);
-// console.log(window.screen.width);
-// console.log(window.screen.height);
-// console.log(window.screen.colorDepth);
-// console.log(window.screen.pixelDepth);
-// console.log(window.screen.availWidth);
-// console.log(window.screen.availHeight);
+// // getting attributes
+// let id = demo.getAttribute("id");
+// let css = demo.getAttribute("class");
+// console.log(id);
+// console.log(css);
 
 
-// let screenObj = window.screen;
-// console.log(screenObj);
-
-// if (screen.pixelDepth < 8) {
-//     console.log("low resolution");
-// } else {
-//     console.log("normal resolution");
-// }
-
-// // history object 
-
-// console.log(window.history.back());
-// console.log(window.history.forward());
-
-// console.log(window.location.href); // location of the link
-// console.log(window.location.protocol); // return a file // or https etc
-// if (window.location.protocol) {
-//     console.log("web server");
-// } else {
-//     console.log("not a webserver");
-// }
-
-// console.log(window.location.hostname);
-// console.log(window.location.host);
-// console.log(window.location.port);
-// console.log(window.location.hash);
-
-// console.log(window.location.origin);
-// console.log(window.location.pathname);
-
-// console.log(window.location.assign);
-
-// // using a click button and only using javascript
-
-// console.log(window.location.assign("https://www.google.com"));
-// document.getElementById("btn").addEventListener("click",
-//     e => {
-//         window.location.assign("https://facebook.com");
-//     });
+// adding more than one class name 
+demo.className = "hello"; // override the previous value
+//console.log(demo);
+demo.title = "hello i am title"; // add without set attribute
+demo.setAttribute("class", "byyee"); // another way to add
+// add css classes 
+demo.className = "jspider qspider pyspider cspider"; // not a dom tokenList
+console.log(demo.classList); // creates a tokenlist
+demo.classList.add("bspider", "dspider");
+demo.classList.remove("pyspider");
+demo.classList.toggle("jspider");
+demo.addEventListener("click", e => {
+    demo.classList.toggle("jspider");
+})
