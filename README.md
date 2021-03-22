@@ -21,3 +21,5 @@
 # object methods freeze,strict-mode, assign , ES6 key value shortcut,iterating through object key and values
 
 # object methods apply ,call and bind and there working
+
+# javascript questions are present in the javascript foler with file name as js.txt and some question are also in the question-javascript.js file

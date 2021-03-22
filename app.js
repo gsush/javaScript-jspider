@@ -95,7 +95,7 @@
 
 
 // how to add attributes in html
-let demo = document.getElementById("demo");
+//let demo = document.getElementById("demo");
 // demo.setAttribute("class", "jspider");
 // demo.setAttribute("title", "we are adding attributes");
 // demo.setAttribute("disabled", true);
@@ -110,17 +110,147 @@ let demo = document.getElementById("demo");
 // console.log(css);
 
 
-// adding more than one class name 
-demo.className = "hello"; // override the previous value
+// // adding more than one class name 
+// demo.className = "hello"; // override the previous value
+// //console.log(demo);
+// demo.title = "hello i am title"; // add without set attribute
+// demo.setAttribute("class", "byyee"); // another way to add
+// // add css classes 
+// demo.className = "jspider qspider pyspider cspider"; // not a dom tokenList
+// console.log(demo.classList); // creates a tokenlist
+// demo.classList.add("bspider", "dspider");
+// demo.classList.remove("pyspider");
+// demo.classList.toggle("jspider");
+// demo.addEventListener("click", e => {
+//     demo.classList.toggle("jspider");
+// })
+
+// // create element in dom 22 march 2021
+//let div = document.createElement("div");
+//console.log(div);
+
+// creates an instance of the element for the specified tag
+
+//let form = document.createElement("form");
+
+//div.textContent = "I am div";
+//form.textContent = "I am form";
+//console.log(form);
+
+//let demo = document.getElementById("demo");
+//demo.appendChild(div);
+//demo.prepend(div);
+//demo.append(div);
 //console.log(demo);
-demo.title = "hello i am title"; // add without set attribute
-demo.setAttribute("class", "byyee"); // another way to add
-// add css classes 
-demo.className = "jspider qspider pyspider cspider"; // not a dom tokenList
-console.log(demo.classList); // creates a tokenlist
-demo.classList.add("bspider", "dspider");
-demo.classList.remove("pyspider");
-demo.classList.toggle("jspider");
-demo.addEventListener("click", e => {
-    demo.classList.toggle("jspider");
-})
+
+// *******************create a form using only javascrit************************
+// let form = document.createElement("form");
+// form.setAttribute('method', 'GET');
+// form.setAttribute('action', '#');
+
+// // input and label
+// let lableForUsername = document.createElement('label');
+// //lableForUsername.setAttribute('for', 'username');
+// lableForUsername.htmlFor('username');
+
+// let lableForPassword = document.createElement('label');
+// //lableForPassword.setAttribute('for', 'password');
+// lableForPassword.htmlFor('password');
+
+// let inputForUsername = document.createElement("input");
+// inputForUsername.setAttribute('type', 'text');
+// inputForUsername.placeholder = "enter username";
+// inputForUsername.name = "username";
+// inputForUsername.id = 'username';
+// inputForUsername.type = "text";
+
+
+// let inputForPassword = document.createElement('input');
+// inputForPassword.type = "password";
+// inputForPassword.id = "password";
+// inputForPassword.name = "password";
+// inputForPassword.placeholder = "enter password";
+
+// let divForUsername = document.createElement('div');
+// let divForPassword = document.createElement('div');
+
+// divForUsername.appendChild(lableForUsername);
+// divForPassword.appendChild(inputForUsername);
+
+// divForPassword.appendChild(lableForPassword);
+// divForPassword.appendChild(inputForPassword);
+
+// document.body.appendChild(form)
+//----------------------------***********************************
+
+// let form = document.createElement('form');
+// form.action = '#';
+// form.method = 'GET';
+
+// let divForUsername = document.createElement('div');
+// let divForPassword = document.createElement('div');
+// let divForButton = document.createElement('div');
+
+// form.appendChild(divForUsername);
+// form.appendChild(divForPassword);
+// form.appendChild(divForButton);
+// // console.log(form);
+
+// let lableForUsername = document.createElement('label');
+// let lableForPassword = document.createElement('label');
+
+// lableForUsername.htmlFor = 'username';
+// lableForPassword.htmlFor = 'password';
+
+// let inputForUsername = document.createElement('input');
+// let inputForPassword = document.createElement('input');
+
+// inputForUsername.type = "text";
+// inputForUsername.id = "username";
+// inputForUsername.placeholder = "enter you name";
+// inputForUsername.name = "username";
+
+// inputForPassword.type = "password";
+// inputForPassword.id = "password";
+// inputForPassword.name = "password";
+// inputForPassword.placeholder = "enter password";
+
+// let button = document.createElement('button');
+// button.textContent = "login";
+
+// divForUsername.appendChild(lableForUsername);
+// divForUsername.appendChild(inputForUsername);
+
+// divForPassword.appendChild(lableForPassword);
+// divForPassword.appendChild(inputForPassword);
+
+// divForButton.appendChild(button);
+
+// document.appendChild(form);
+
+// how to iterate through the anchor tag of different elements using for loop
+// let links = document.getElementsByTagName('a');
+// // console.log(links);
+
+// for (let i = 0; i < links.length; i++) {
+//     //console.log(i);
+//     //console.log("links " + i);
+//     links[i].style.color = "#fdg";
+//     links[i].className = "links link -" + i;
+//     console.log(links);
+// }
+
+
+//Dom events
+let btn = document.getElementById('btn');
+btn.onclick = function () {
+    console.log('btn clicked');
+}
+
+btn.onmouseenter = function () {
+    console.log("mouse entered");
+}
+
+btn.onmouseleave = function () {
+    console.log("mouse leave");
+}
