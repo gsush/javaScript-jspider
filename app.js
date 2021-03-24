@@ -267,19 +267,62 @@
 // else if (half == "AM" && h == "12") h = "00";
 // console.log(h + ":" + m + ":" + s.slice(0, 2));
 
-let list = document.querySelectorAll("ul li");
-//loop this li's
-list.forEach(li => {
-    //  click event for all li's
-    li.addEventListener("click", e => {
-        e.preventDefault();
-        //how to get current element
-        let listData = e.target.parentNode.children[1];
-        if (listData === undefined) {
-            console.log("no dropdown");
-        } else {
-            listData.classList.toggle("active");
-            console.log(listData);
-        }
-    });
+// let list = document.querySelectorAll("ul li");
+// //loop this li's
+// list.forEach(li => {
+//     //  click event for all li's
+//     li.addEventListener("click", e => {
+//         e.preventDefault();
+//         //how to get current element
+//         let listData = e.target.parentNode.children[1];
+//         if (listData === undefined) {
+//             console.log("no dropdown");
+//         } else {
+//             listData.classList.toggle("active");
+//             console.log(listData);
+//         }
+//     });
+// });
+
+// using the keyboard events and use then as we want
+// let text1 = document.getElementById('text1');
+// let text2 = document.getElementById('text2');
+
+// text1.addEventListener("keyup", e => {
+//     text2.innerHTML = e.target.value;
+//     if (e.target.value.length > 10) {
+//         text2.style.color = "green";
+//         text2.style.textTransform = "uppercase";
+//     } else if (e.target.value.length < 10) {
+//         text2.style.color = "red";
+//     }
+// })
+
+// speech recognition 
+
+// window.SpeechRecognition = window.SpeechRecognition || window.webKitSpeechRecognition;
+
+// let p = document.createElement('p');
+// let recognition = new SpeechRecognition;
+// console.log(recognition);
+
+window.SpeechRecognition =
+    window.SpeechRecognition || window.webkitSpeechRecognition;
+
+let recognition = new SpeechRecognition();
+let p = document.createElement("p");
+let template = document.querySelector("#template");
+template.appendChild(p);
+
+recognition.addEventListener("result", (e) => {
+    //console.log(e.results[0][0].transcript);
+    let transcript = e.results[0][0].transcript;
+    p.innerHTML = transcript;
+    if (e.results[0].isFinal) {
+        p = document.createElement("p");
+        template.appendChild(p);
+    }
 });
+
+recognition.addEventListener("end", recognition.start);
+recognition.start();
