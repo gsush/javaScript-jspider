@@ -241,16 +241,45 @@
 // }
 
 
-//Dom events
-let btn = document.getElementById('btn');
-btn.onclick = function () {
-    console.log('btn clicked');
-}
+// //Dom events
+// let btn = document.getElementById('btn');
+// btn.onclick = function () {
+//     console.log('btn clicked');
+// }
 
-btn.onmouseenter = function () {
-    console.log("mouse entered");
-}
+// btn.onmouseenter = function () {
+//     console.log("mouse entered");
+// }
 
-btn.onmouseleave = function () {
-    console.log("mouse leave");
-}
+// btn.onmouseleave = function () {
+//     console.log("mouse leave");
+// }
+
+// let time = '07:05:45PM';
+// time = time.split(":");
+// var h = time[0];
+// var m = time[1];
+// var s = time[2];
+// var half = s.slice(2, 4); // slice return the value first start 
+// //position and end positin but end is not included
+
+// if (half == "PM" && h != "12") h = h * 1 + 12;
+// else if (half == "AM" && h == "12") h = "00";
+// console.log(h + ":" + m + ":" + s.slice(0, 2));
+
+let list = document.querySelectorAll("ul li");
+//loop this li's
+list.forEach(li => {
+    //  click event for all li's
+    li.addEventListener("click", e => {
+        e.preventDefault();
+        //how to get current element
+        let listData = e.target.parentNode.children[1];
+        if (listData === undefined) {
+            console.log("no dropdown");
+        } else {
+            listData.classList.toggle("active");
+            console.log(listData);
+        }
+    });
+});
