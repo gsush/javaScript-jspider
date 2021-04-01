@@ -1,106 +1,46 @@
-/* * {
-  padding: 0;
-  margin: 0%;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: antiquewhite;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  width: 80%;
-  margin: 0auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-div {
-  flex: 1;
-  background-color: aqua;
-  padding: 10px;
-  margin: 10px;
-}
-
-img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-h2 {
-  border-bottom: 1px solid #eee;
-  padding: 10px;
-}
-p {
-  padding: 5px;
-}
-*/
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
 body {
-  background-color: #eee;
-  font-family: "Times New Roman", Times, serif;
+  background-color: aqua;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-nav {
+
+#searchBlock article {
+  width: 100px;
+  margin: 50px auto;
+}
+
+input {
+  width: 100px auto;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+img {
+  height: 200px;
+  object-fit: cover;
+  border: 1px solid #ccc;
   width: 100%;
-  background-color: #fff;
-  box-shadow: 1px 1px 5px 1px #eee;
-  height: 50px;
-  transform: translate(0px);
-  transition: ease all 0.7s;
 }
-nav ul {
+#template {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-nav ul li a {
+
+#template div {
+  flex-basis: 24%;
+  margin: 2px;
+}
+#movies article {
+  width: 80%;
+  margin: 0 auto;
   padding: 10px;
-  text-decoration: none;
-  margin: 4px;
-  color: #111;
-  text-transform: uppercase;
-}
-
-nav ul li a:hover {
-  background: crimson;
-  transform: scale(1);
-  transition: ease all 0.6s;
-  color: #fff;
-}
-
-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: crimson;
-  height: 50px;
-  width: 90px;
-  border: none;
-  color: #fff;
-  font-size: 16px;
-}
-
-#dropdown {
-  flex-direction: column;
-  position: absolute;
-  top: 35px;
-  background: #fff;
-  height: 140px;
-  align-items: baseline;
-  justify-content: space-evenly;
-  display: none;
-  width: 250px;
-}
-.active {
-  display: block !important;
-}
-
-.active li a {
-  display: block;
-  width: 100%;
+  background-color: #fff;
 }
