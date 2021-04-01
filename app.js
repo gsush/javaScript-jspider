@@ -1,108 +1,32 @@
-// // promises 29/03/2021 ****************holi *********
-// // Example one for promise
-// let promise = new Promise((resolve, reject) => {
-//     // console.log(resolve);
-//     // console.log(reject);
-//     let isAvailable = false; // true and false value will give the required output
-//     if (isAvailable) {
-//         resolve("yes i am available");
-//     } else {
-//         reject("sorry not available");
-//     }
-// })
+// // 01 April 2021
+// //window.Math object
 
-// promise.then(function (data) {
-//     console.log(data);
-// })
+// console.log(Math);
+// console.log(Math.max(10, 20, 30, 40, 200, 1000)); // max method in math object
+// console.log(Math.min(10, 20, 30, 40, 200, 1000)); // min method in math object
 
-// promise.catch(function (error) {
-//     console.log(error);
-// })
+// // Difference between data and math is that data is a constructor object whereas math is not a 
+// // constructor hence we don't use the new keyword when creating  a new math object
 
-// Example two for promise 
+// console.log(Math.floor(1.1)); // floor Returns the greatest integer less than or equal to its
+// console.log(Math.floor(1.6)); //  numeric argument
+// console.log(Math.floor(-1.1)); // -2
 
-// let room = new Promise((resolve, reject) => {
-//     let cleaned = false;
-//     if (cleaned) {
-//         resolve("yes room is cleaned");
-//     } else {
-//         reject("do something to clean");
-//     }
-// })
-// room.then(data => console.log(data)).catch(err => console.log(err));
+// console.log(Math.ceil(-1.1)); // -1 ceil Returns the smallest integer greater than or 
+// console.log(Math.ceil(1.1)); // 2   equal to its numeric argument
+// console.log(Math.ceil(0.1)); // 1
 
-// single thereaded event loop object used for the time delay perupose - setTimeout Function.
+// console.log(Math.trunc(5.26)); // takes only the interger part
+// console.log(Math.round(5.5666)); // round to next when >0.5 else same same number
 
-// setTimeout(function () {
-//     console.log("hello i am timeout function"); //time is specified in ms 
-// }, 2000);
+// how to generate a randowm number ***********Important**********
 
-// let user = "snehangshu";
-// console.log(user);
-// window.clearInterval();
-
-// promises are used to call api and connecting to AJAX calls
-
-// let promise = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         resolve("connect to uber")
-//     }, 1201) // resolve part
-//     setTimeout(() => {
-//         reject("ubable to connect to internet");
-//     }, 1200) // reject part
-// })
-
-// promise.then(data => console.log(data)).catch(err => console.log(err));
-
-//Methods in promises
-// 1. all()
-// 2. any()
-// 3. race()
-
-// let promise1 = new Promise((resolve, reject) => {
-//     let isJavaScriptGood = false;
-//     if (isJavaScriptGood) {
-//         resolve("yes i like javas")
-//     } else {
-//         reject("i don't like javascrpt")
-//     }
-// });
-
-// let promise2 = new Promise((resolve, reject) => {
-//     let isJavaScriptGood = false;
-//     if (isJavaScriptGood) {
-//         resolve("yes i like javast")
-//     } else {
-//         reject("i don't like javascrpt")
-//     }
-// });
-
-// let promise3 = new Promise((resolve, reject) => {
-//     let isJavaScriptGood = false;
-//     if (isJavaScriptGood) {
-//         resolve("yes i like javascript")
-//     } else {
-//         reject("i don't like javascrpt")
-//     }
-// });
-
-// // Promise.all([promise1, promise2, promise3])
-// //     .then(data => console.log(data))
-// //     .catch(err => console.log(err));
-
-
-
-// Promise.any([promise1, promise2, promise3])
-//     .then(data => console.log(data))  // when all are false
-//     .catch(err => console.log(err)); //AggregateError: No Promise in Promise.any was resolved
-
-let sashi = new Promise((resolve, reject) => {
-    setTimeout(() => { resolve("sashi won") }, 2000)
+//Math.round //Returns a supplied numeric expression rounded to the nearest integer.
+let random = Math.random() * 100;
+console.log(random);
+// Generating random numbers 
+let btn = document.getElementById('btn');
+btn.addEventListener('click', e => {
+    let random = Math.round(Math.random() * 100 + 1);
+    document.getElementById('template').innerHTML = random;
 })
-let mani = new Promise((resolve, reject) => {
-    setTimeout(() => { resolve("main won") }, 2000)
-})
-let dinesh = new Promise((resolve, reject) => {
-    setTimeout(() => { resolve("dinesh won") }, 3000)
-})
-Promise.race([sashi, mani, dinesh]).then(data => console.log(data)).catch(err => console.log(err));
